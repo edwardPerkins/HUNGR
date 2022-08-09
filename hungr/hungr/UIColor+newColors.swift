@@ -10,8 +10,8 @@ import UIKit
 
 extension UIColor {
     
-    static var Background = UIColor(named: "Background")
-    static var TextColor = UIColor(named: "TextColor")
-    static var AccentOne = UIColor(named: "AccentOne")
-    static var AccentTwo = UIColor(named: "AccentTwo")
+    static let Background = UIColor(named: "Background")
+    static let TextColor = UIColor(named: "TextColor")
+    static let AccentOne = UIColor(named: "AccentOne")
+    static let AccentTwo = UIColor(named: "AccentTwo")
 }
