@@ -30,4 +30,5 @@ class NetWorkManager{
             }
         }.resume()
     }
+    
 }
