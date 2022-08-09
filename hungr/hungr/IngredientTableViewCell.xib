@@ -17,22 +17,26 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 pound" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qaq-gu-dKi">
-                        <rect key="frame" x="16" y="12" width="61" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 pound" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qaq-gu-dKi">
+                        <rect key="frame" x="16" y="11.5" width="61" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" name="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="penne rigate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQZ-8p-VDY">
-                        <rect key="frame" x="103" y="12" width="96" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="penne rigate" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQZ-8p-VDY">
+                        <rect key="frame" x="102" y="12" width="95.5" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" name="AccentTwo"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <color key="backgroundColor" name="accentOne"/>
+                <constraints>
+                    <constraint firstItem="Qaq-gu-dKi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="CZ5-Qp-B4A"/>
+                    <constraint firstItem="OQZ-8p-VDY" firstAttribute="leading" secondItem="Qaq-gu-dKi" secondAttribute="trailing" constant="25" id="G7C-29-MWz"/>
+                    <constraint firstItem="OQZ-8p-VDY" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="QU2-K5-isY"/>
+                    <constraint firstItem="Qaq-gu-dKi" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="jRQ-oQ-8Vj"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <point key="canvasLocation" x="133" y="96"/>
