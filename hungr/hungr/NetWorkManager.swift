@@ -9,6 +9,24 @@ import Foundation
 
 
 class NetWorkManager{
+    
     private init(){}
     let shared = NetWorkManager()
+    
+    func fetchData<T: Codable>(url: String, completion: @escaping (T) -> Void) {
+        
+        guard let url = URL(string: url) else { return }
+        
+        URLSession.shared.dataTask(with: url) { data, _, error in
+            
+            guard let data = data else { return }
+            
+            do {
+                completion(try JSONDecoder().decode(T.self, from: data))
+            }
+            catch {
+                print("error in network call", error)
+            }
+        }.resume()
+    }
 }
