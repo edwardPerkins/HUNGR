@@ -8,20 +8,29 @@
 import SwiftUI
 
 struct FirstTimeUseView: View {
+    var firstUse: Bool { !UserDefaults.standard.bool(forKey: "usedAlready") }
+    
     var body: some View {
-        ZStack {
-            // background
-            Color.background
-                .ignoresSafeArea()
-            
-            // content
-            ScrollView {
-                welcomeSection
-                thankYouSection
-                logoSection
-                continueSection
+        NavigationView {
+            if firstUse {
+                ZStack {
+                    // background
+                    Color.background
+                        .ignoresSafeArea()
+                    
+                    // content
+                    VStack {
+                        welcomeSection
+                        thankYouSection
+                        logoSection
+                        continueSection
+                    }
+                }
+            } else {
+                TabViewRepresentable().navigationBarHidden(true).ignoresSafeArea()
             }
         }
+        .accentColor(.accent2)
     }
 }
 
@@ -53,13 +62,11 @@ extension FirstTimeUseView {
     }
     
     var continueSection: some View {
-        Button(action: {},
-               label: {
-                Text("Continue")
-                    .font(.system(size: 40.0))
-                    .foregroundColor(.accentOne)
-                }
-        )
+        NavigationLink(destination: TabViewRepresentable().navigationBarHidden(true).ignoresSafeArea()) {
+            Text("Continue")
+                .font(.system(size: 40.0))
+                .foregroundColor(.accentOne)
+        }
         .frame(width: UIScreen.main.bounds.width - 40, alignment: .center)
         .padding(.vertical, 7)
         .background(Color.accentTwo)

@@ -35,8 +35,9 @@
 		C9EBAD5728A167E1007C70C2 /* ViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD5628A167E1007C70C2 /* ViewController+DataSource.swift */; };
 		D046B59428A2DBBA005A548A /* MealDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D046B59328A2DBBA005A548A /* MealDetailsView.swift */; };
 		D046B59628A2EE43005A548A /* MealDetailsHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D046B59528A2EE43005A548A /* MealDetailsHost.swift */; };
-		D0E26FF828A34051007F310E /* SpenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E26FF728A34051007F310E /* SpenceView.swift */; };
-		D0E26FFC28A34CF2007F310E /* ViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E26FFB28A34CF2007F310E /* ViewControllerWrapper.swift */; };
+		D04D484D28A44D9C00415033 /* FirstTimeUse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D04D484C28A44D9C00415033 /* FirstTimeUse.storyboard */; };
+		D04D484F28A4547800415033 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D484E28A4547800415033 /* TabViewController.swift */; };
+		D0E26FFC28A34CF2007F310E /* TabViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E26FFB28A34CF2007F310E /* TabViewRepresentable.swift */; };
 		D913014428A2BC0D00AB4B88 /* UIColor+newColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D913014328A2BC0D00AB4B88 /* UIColor+newColors.swift */; };
 		D913014828A4250200AB4B88 /* SearchByLetter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D913014728A4250200AB4B88 /* SearchByLetter.storyboard */; };
 /* End PBXBuildFile section */
@@ -48,7 +49,6 @@
 		0B7D6A2C28A32BDD008515D5 /* FirstTimeUseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeUseView.swift; sourceTree = "<group>"; };
 		89DDB61E28A2E79B00934303 /* hungr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = hungr.xcdatamodel; sourceTree = "<group>"; };
 		89DDB62028A3013300934303 /* MealModel+ConvertData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MealModel+ConvertData.swift"; sourceTree = "<group>"; };
-
 		C7A80FC428A4284800F2EB48 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C9EBAD0F28A1540F007C70C2 /* hungr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hungr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9EBAD1228A1540F007C70C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,8 +73,9 @@
 		C9EBAD5628A167E1007C70C2 /* ViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+DataSource.swift"; sourceTree = "<group>"; };
 		D046B59328A2DBBA005A548A /* MealDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsView.swift; sourceTree = "<group>"; };
 		D046B59528A2EE43005A548A /* MealDetailsHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsHost.swift; sourceTree = "<group>"; };
-		D0E26FF728A34051007F310E /* SpenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpenceView.swift; sourceTree = "<group>"; };
-		D0E26FFB28A34CF2007F310E /* ViewControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerWrapper.swift; sourceTree = "<group>"; };
+		D04D484C28A44D9C00415033 /* FirstTimeUse.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstTimeUse.storyboard; sourceTree = "<group>"; };
+		D04D484E28A4547800415033 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		D0E26FFB28A34CF2007F310E /* TabViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewRepresentable.swift; sourceTree = "<group>"; };
 		D913014328A2BC0D00AB4B88 /* UIColor+newColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+newColors.swift"; sourceTree = "<group>"; };
 		D913014728A4250200AB4B88 /* SearchByLetter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchByLetter.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +124,7 @@
 		C9EBAD2628A1599F007C70C2 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
+				C9EBAD1D28A15410007C70C2 /* LaunchScreen.storyboard */,
 				C9EBAD1228A1540F007C70C2 /* AppDelegate.swift */,
 				C9EBAD1428A1540F007C70C2 /* SceneDelegate.swift */,
 				C9EBAD2028A15410007C70C2 /* Info.plist */,
@@ -197,8 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				C9EBAD4328A160C4007C70C2 /* FirstTimeUseVC.swift */,
-				D0E26FF728A34051007F310E /* SpenceView.swift */,
-				C9EBAD1D28A15410007C70C2 /* LaunchScreen.storyboard */,
+				D04D484C28A44D9C00415033 /* FirstTimeUse.storyboard */,
 				0B7D6A2C28A32BDD008515D5 /* FirstTimeUseView.swift */,
 			);
 			name = FirstTimeUse;
@@ -249,14 +250,12 @@
 			isa = PBXGroup;
 			children = (
 				C9EBAD1628A1540F007C70C2 /* ViewController.swift */,
-				D0E26FFB28A34CF2007F310E /* ViewControllerWrapper.swift */,
+				D0E26FFB28A34CF2007F310E /* TabViewRepresentable.swift */,
+				D04D484E28A4547800415033 /* TabViewController.swift */,
 				C9EBAD5428A167CC007C70C2 /* ViewController+Delegate.swift */,
 				C9EBAD5628A167E1007C70C2 /* ViewController+DataSource.swift */,
-
 				D913014728A4250200AB4B88 /* SearchByLetter.storyboard */,
-
 				C7A80FC428A4284800F2EB48 /* Main.storyboard */,
-
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -322,9 +321,8 @@
 				0B7D6A2728A2C7D0008515D5 /* IngredientTableViewCell.xib in Resources */,
 				0B7D6A2B28A2E38E008515D5 /* TableViewCell.xib in Resources */,
 				C9EBAD1F28A15410007C70C2 /* LaunchScreen.storyboard in Resources */,
-
+				D04D484D28A44D9C00415033 /* FirstTimeUse.storyboard in Resources */,
 				D913014828A4250200AB4B88 /* SearchByLetter.storyboard in Resources */,
-
 				C7A80FC528A4284800F2EB48 /* Main.storyboard in Resources */,
 				C9EBAD1C28A15410007C70C2 /* Assets.xcassets in Resources */,
 			);
@@ -343,17 +341,17 @@
 				C9EBAD3628A15E6C007C70C2 /* FavoritesVC.swift in Sources */,
 				D046B59628A2EE43005A548A /* MealDetailsHost.swift in Sources */,
 				C9EBAD4128A15F43007C70C2 /* StringConstants.swift in Sources */,
-				D0E26FFC28A34CF2007F310E /* ViewControllerWrapper.swift in Sources */,
+				D0E26FFC28A34CF2007F310E /* TabViewRepresentable.swift in Sources */,
 				C9EBAD1728A1540F007C70C2 /* ViewController.swift in Sources */,
 				89DDB62128A3013300934303 /* MealModel+ConvertData.swift in Sources */,
 				0B7D6A2D28A32BDD008515D5 /* FirstTimeUseView.swift in Sources */,
 				C9EBAD1328A1540F007C70C2 /* AppDelegate.swift in Sources */,
 				C9EBAD4428A160C4007C70C2 /* FirstTimeUseVC.swift in Sources */,
-				D0E26FF828A34051007F310E /* SpenceView.swift in Sources */,
 				C9EBAD4B28A16186007C70C2 /* TableViewCell.swift in Sources */,
 				D046B59428A2DBBA005A548A /* MealDetailsView.swift in Sources */,
 				C9EBAD3C28A15EC0007C70C2 /* DataManger.swift in Sources */,
 				D913014428A2BC0D00AB4B88 /* UIColor+newColors.swift in Sources */,
+				D04D484F28A4547800415033 /* TabViewController.swift in Sources */,
 				C9EBAD5028A161C5007C70C2 /* FavoritesVC+DataSource.swift in Sources */,
 				C9EBAD2928A15A07007C70C2 /* MealDetailsVM.swift in Sources */,
 				C9EBAD3928A15E9D007C70C2 /* NetWorkManager.swift in Sources */,
