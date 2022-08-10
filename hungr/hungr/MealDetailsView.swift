@@ -21,7 +21,7 @@ struct MealDetailsView: View {
             }
             ingrediantList
         }
-        .foregroundColor(.textColor)
+        .foregroundColor(Color.textColor2)
         .background { Color.background.ignoresSafeArea() }
     }
     
@@ -43,7 +43,7 @@ struct MealDetailsView: View {
             Rectangle()
                 .ignoresSafeArea()
                 .frame(height: 1)
-                .foregroundColor(.background)
+                .foregroundColor(Color.background2)
         }
     }
 }

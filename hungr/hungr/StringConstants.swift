@@ -12,8 +12,8 @@ enum Urls{
     
 }
 
-enum FirstTimeUse{
-    
+enum FirstTimeUse: String {
+    case thankYouMessage = "Thank you for downloading Hunger. I hope we can help you prepare tasty meals for a healthier tomorrow. Follow us on Instagram @HUNGR"
 }
 
 enum Alerts{
