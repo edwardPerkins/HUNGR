@@ -14,7 +14,6 @@
 		C9EBAD1C28A15410007C70C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9EBAD1B28A15410007C70C2 /* Assets.xcassets */; };
 		C9EBAD1F28A15410007C70C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9EBAD1D28A15410007C70C2 /* LaunchScreen.storyboard */; };
 		C9EBAD2928A15A07007C70C2 /* MealDetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD2828A15A07007C70C2 /* MealDetailsVM.swift */; };
-		C9EBAD2B28A15D61007C70C2 /* MealDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD2A28A15D61007C70C2 /* MealDetailsVC.swift */; };
 		C9EBAD3128A15DFC007C70C2 /* FavoritesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD3028A15DFC007C70C2 /* FavoritesVM.swift */; };
 		C9EBAD3428A15E2A007C70C2 /* SearchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD3328A15E2A007C70C2 /* SearchVM.swift */; };
 		C9EBAD3628A15E6C007C70C2 /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD3528A15E6C007C70C2 /* FavoritesVC.swift */; };
@@ -29,6 +28,10 @@
 		C9EBAD5028A161C5007C70C2 /* FavoritesVC+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD4F28A161C5007C70C2 /* FavoritesVC+DataSource.swift */; };
 		C9EBAD5528A167CC007C70C2 /* ViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD5428A167CC007C70C2 /* ViewController+Delegate.swift */; };
 		C9EBAD5728A167E1007C70C2 /* ViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD5628A167E1007C70C2 /* ViewController+DataSource.swift */; };
+		D046B59428A2DBBA005A548A /* MealDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D046B59328A2DBBA005A548A /* MealDetailsView.swift */; };
+		D046B59628A2EE43005A548A /* MealDetailsHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D046B59528A2EE43005A548A /* MealDetailsHost.swift */; };
+		D0E26FF828A34051007F310E /* SpenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E26FF728A34051007F310E /* SpenceView.swift */; };
+		D0E26FFC28A34CF2007F310E /* ViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E26FFB28A34CF2007F310E /* ViewControllerWrapper.swift */; };
 		D913014428A2BC0D00AB4B88 /* UIColor+newColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D913014328A2BC0D00AB4B88 /* UIColor+newColors.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +45,6 @@
 		C9EBAD1E28A15410007C70C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9EBAD2028A15410007C70C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9EBAD2828A15A07007C70C2 /* MealDetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsVM.swift; sourceTree = "<group>"; };
-		C9EBAD2A28A15D61007C70C2 /* MealDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsVC.swift; sourceTree = "<group>"; };
 		C9EBAD3028A15DFC007C70C2 /* FavoritesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVM.swift; sourceTree = "<group>"; };
 		C9EBAD3328A15E2A007C70C2 /* SearchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVM.swift; sourceTree = "<group>"; };
 		C9EBAD3528A15E6C007C70C2 /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
@@ -57,6 +59,10 @@
 		C9EBAD4F28A161C5007C70C2 /* FavoritesVC+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoritesVC+DataSource.swift"; sourceTree = "<group>"; };
 		C9EBAD5428A167CC007C70C2 /* ViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Delegate.swift"; sourceTree = "<group>"; };
 		C9EBAD5628A167E1007C70C2 /* ViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+DataSource.swift"; sourceTree = "<group>"; };
+		D046B59328A2DBBA005A548A /* MealDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsView.swift; sourceTree = "<group>"; };
+		D046B59528A2EE43005A548A /* MealDetailsHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsHost.swift; sourceTree = "<group>"; };
+		D0E26FF728A34051007F310E /* SpenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpenceView.swift; sourceTree = "<group>"; };
+		D0E26FFB28A34CF2007F310E /* ViewControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerWrapper.swift; sourceTree = "<group>"; };
 		D913014328A2BC0D00AB4B88 /* UIColor+newColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+newColors.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,8 +120,9 @@
 		C9EBAD2728A159AC007C70C2 /* MealDetails */ = {
 			isa = PBXGroup;
 			children = (
-				C9EBAD2A28A15D61007C70C2 /* MealDetailsVC.swift */,
+				D046B59528A2EE43005A548A /* MealDetailsHost.swift */,
 				C9EBAD2828A15A07007C70C2 /* MealDetailsVM.swift */,
+				D046B59328A2DBBA005A548A /* MealDetailsView.swift */,
 			);
 			name = MealDetails;
 			sourceTree = "<group>";
@@ -175,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				C9EBAD4328A160C4007C70C2 /* FirstTimeUseVC.swift */,
+				D0E26FF728A34051007F310E /* SpenceView.swift */,
 				C9EBAD1D28A15410007C70C2 /* LaunchScreen.storyboard */,
 			);
 			name = FirstTimeUse;
@@ -224,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				C9EBAD1628A1540F007C70C2 /* ViewController.swift */,
+				D0E26FFB28A34CF2007F310E /* ViewControllerWrapper.swift */,
 				C9EBAD5428A167CC007C70C2 /* ViewController+Delegate.swift */,
 				C9EBAD5628A167E1007C70C2 /* ViewController+DataSource.swift */,
 			);
@@ -305,13 +314,16 @@
 				C9EBAD4E28A161B3007C70C2 /* FavoritesVC+Delegate.swift in Sources */,
 				C9EBAD5728A167E1007C70C2 /* ViewController+DataSource.swift in Sources */,
 				C9EBAD3628A15E6C007C70C2 /* FavoritesVC.swift in Sources */,
+				D046B59628A2EE43005A548A /* MealDetailsHost.swift in Sources */,
 				C9EBAD4128A15F43007C70C2 /* StringConstants.swift in Sources */,
+				D0E26FFC28A34CF2007F310E /* ViewControllerWrapper.swift in Sources */,
 				C9EBAD1728A1540F007C70C2 /* ViewController.swift in Sources */,
 				C9EBAD1328A1540F007C70C2 /* AppDelegate.swift in Sources */,
 				C9EBAD4428A160C4007C70C2 /* FirstTimeUseVC.swift in Sources */,
+				D0E26FF828A34051007F310E /* SpenceView.swift in Sources */,
 				C9EBAD4B28A16186007C70C2 /* TableViewCell.swift in Sources */,
+				D046B59428A2DBBA005A548A /* MealDetailsView.swift in Sources */,
 				C9EBAD3C28A15EC0007C70C2 /* DataManger.swift in Sources */,
-				C9EBAD2B28A15D61007C70C2 /* MealDetailsVC.swift in Sources */,
 				D913014428A2BC0D00AB4B88 /* UIColor+newColors.swift in Sources */,
 				C9EBAD5028A161C5007C70C2 /* FavoritesVC+DataSource.swift in Sources */,
 				C9EBAD2928A15A07007C70C2 /* MealDetailsVM.swift in Sources */,
