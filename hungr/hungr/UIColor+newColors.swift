@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 extension UIColor {
     
@@ -14,4 +15,11 @@ extension UIColor {
     static let TextColor = UIColor(named: "textColor")
     static let AccentOne = UIColor(named: "accentOne")
     static let AccentTwo = UIColor(named: "accentTwo")
+}
+
+extension Color {
+    static let background2 = Color(uiColor: .Background ?? .clear)
+    static let textColor2 = Color(uiColor: .TextColor ?? .clear)
+    static let accent1 = Color(uiColor: .AccentOne ?? .clear)
+    static let accent2 = Color(uiColor: .AccentTwo ?? .clear)
 }

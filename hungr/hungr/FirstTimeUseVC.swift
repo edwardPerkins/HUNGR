@@ -5,16 +5,14 @@
 //  Created by Rave Bizz on 8/8/22.
 //
 
-import UIKit
+import SwiftUI
 
-class FirstTimeUseVC: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+class FirstTimeUseVC: UIHostingController<SpenceView> {
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder, rootView: SpenceView())
+        
     }
-    
+
 
     /*
     // MARK: - Navigation
