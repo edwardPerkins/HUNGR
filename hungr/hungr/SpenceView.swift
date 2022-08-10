@@ -9,21 +9,16 @@ import SwiftUI
 
 struct SpenceView: View {
     
-    init() { print(usedBefore) }
-    
-    var usedBefore: Bool {
-        UserDefaults.standard.bool(forKey: "usedBefore")
-    }
+//    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//    var nextVC: ViewController {
+//        storyboard.instantiateViewController(identifier: "ViewController")
+//    }
     
     var body: some View {
         NavigationView {
-            if usedBefore {
-                ViewControllerWrapper()
-            } else {
-                NavigationLink(destination: ViewControllerWrapper()) {
-                    Text("Hello, Spence!")
-                }.navigationBarBackButtonHidden(true)
-            }
+            NavigationLink(destination: ViewControllerWrapper()) {
+                Text("Hello, Spence!")
+            }.navigationBarBackButtonHidden(true)
         }.accentColor(.accent2)
     }
     
