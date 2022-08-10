@@ -23,12 +23,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L2f-uV-hIo">
-                                <rect key="frame" x="20" y="151" width="282.5" height="34"/>
+                                <rect key="frame" x="20" y="151" width="283.5" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BfX-3g-o0P">
-                                <rect key="frame" x="311.5" y="152.5" width="90.5" height="31"/>
+                                <rect key="frame" x="308.5" y="152.5" width="90.5" height="31"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" image="YES"/>
                                 </accessibility>
@@ -67,7 +67,7 @@
                         <color key="backgroundColor" name="background"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mcZ-7r-gHr" secondAttribute="trailing" id="2Uo-DU-uk6"/>
-                            <constraint firstItem="L2f-uV-hIo" firstAttribute="trailing" secondItem="BfX-3g-o0P" secondAttribute="leading" constant="-9" id="4T6-xF-nhQ"/>
+                            <constraint firstItem="L2f-uV-hIo" firstAttribute="trailing" secondItem="BfX-3g-o0P" secondAttribute="leading" constant="-5" id="4T6-xF-nhQ"/>
                             <constraint firstItem="wAE-dd-BRD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="5k3-qi-SEc"/>
                             <constraint firstItem="BfX-3g-o0P" firstAttribute="centerY" secondItem="L2f-uV-hIo" secondAttribute="centerY" id="CfW-vl-pGb"/>
                             <constraint firstItem="mcZ-7r-gHr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LcW-6F-9QK"/>
@@ -81,7 +81,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FJi-cM-WZa" secondAttribute="trailing" constant="35" id="eFC-oL-YvX"/>
                             <constraint firstItem="mcZ-7r-gHr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-20" id="ehP-dz-WtE"/>
                             <constraint firstItem="RaP-XH-52T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="rMs-f3-gyc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BfX-3g-o0P" secondAttribute="trailing" constant="12" id="tv5-PZ-mDz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BfX-3g-o0P" secondAttribute="trailing" constant="15" id="tv5-PZ-mDz"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="HhA-Ff-Jea"/>
