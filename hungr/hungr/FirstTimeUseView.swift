@@ -15,7 +15,7 @@ struct FirstTimeUseView: View {
                 .ignoresSafeArea()
             
             // content
-            VStack {
+            ScrollView {
                 welcomeSection
                 thankYouSection
                 logoSection
@@ -78,5 +78,6 @@ extension Color {
 struct FirstTimeUseView_Previews: PreviewProvider {
     static var previews: some View {
         FirstTimeUseView()
+            .previewInterfaceOrientation(.portraitUpsideDown)
     }
 }
