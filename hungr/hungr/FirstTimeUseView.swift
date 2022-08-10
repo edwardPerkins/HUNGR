@@ -32,7 +32,7 @@ extension FirstTimeUseView {
             .font(.system(size: 45.0))
             .foregroundColor(Color(uiColor: UIColor.AccentOne ?? .systemMint))
             .padding(.vertical, 10)
-            .padding(.horizontal, 35)
+            .padding(.horizontal, 25)
             .background(Color(uiColor: UIColor.AccentTwo ?? .yellow))
     }
     
