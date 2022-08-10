@@ -19,16 +19,17 @@ final class DataManager{
         self.context = delegate?.persistentContainer.viewContext
     }
     
-    func getFavMeals(completion: ([MealModel]) -> Void) {
-        let request = NSFetchRequest<FavMeal>(entityName: "FavMeal")
-        
+    func getMeals(type: MealType, completion: ([MealModel]) -> Void) {
+        let request = NSFetchRequest<MealEntity>(entityName: "MealEntity")
+        request.predicate = NSPredicate(format: "type == %@", type.rawValue)
         do {
-            var mealModels = [MealModel]()
-            let favMeals = try context?.fetch(request)
-            guard let favMeals = favMeals else { return }
+            let meals = try context?.fetch(request)
+            guard let meals = meals else { return }
             
-            for favMeal in favMeals {
-                mealModels.append(MealModel(favMeal: favMeal))
+            var mealModels = [MealModel]()
+            
+            for meal in meals {
+                mealModels.append(MealModel(mealEntity: meal))
             }
             
             completion(mealModels)
@@ -37,8 +38,8 @@ final class DataManager{
         }
     }
     
-    func getFavMeal(id: String) -> FavMeal? {
-        let request = NSFetchRequest<FavMeal>(entityName: "FavMeal")
+    func getMeal(id: String) -> MealEntity? {
+        let request = NSFetchRequest<MealEntity>(entityName: "MealEntity")
         request.predicate = NSPredicate(format: "idMeal == %@", id)
         
         do {
@@ -51,15 +52,16 @@ final class DataManager{
         return nil
     }
     
-    func saveFavMeal(meal: MealModel) {
+    func saveMeal(type: MealType, meal: MealModel) {
         guard let context = context else {
             return
         }
 
-        guard let favMeals = NSEntityDescription.entity(forEntityName: "FavMeal", in: context) else { return }
-        let mealToSave = NSManagedObject(entity: favMeals, insertInto: context)
+        guard let meals = NSEntityDescription.entity(forEntityName: "MealEntity", in: context) else { return }
+        let mealToSave = NSManagedObject(entity: meals, insertInto: context)
         
-        mealToSave.setValue(meal.idMeal, forKey: "idMeal")
+        mealToSave.setValue(type.rawValue, forKey: "type")
+        mealToSave.setValue(type == .favorite ? meal.idMeal : UUID().uuidString, forKey: "idMeal")
         mealToSave.setValue(meal.strMeal, forKey: "strMeal")
         mealToSave.setValue(meal.strInstructions, forKey: "strInstructions")
         mealToSave.setValue(meal.strMealThumb, forKey: "strMealThumb")
@@ -111,14 +113,14 @@ final class DataManager{
         }
     }
     
-    func deleteFavMeal(id: String) {
-        let favMealToDelete = getFavMeal(id: id)
+    func deleteMeal(id: String) {
+        let mealToDelete = getMeal(id: id)
         
-        guard let favMealToDelete = favMealToDelete else {
+        guard let mealToDelete = mealToDelete else {
             return
         }
 
-        context?.delete(favMealToDelete)
+        context?.delete(mealToDelete)
         
         do {
             try context?.save()
@@ -126,5 +128,10 @@ final class DataManager{
             print("Save Error after deleting: \(error)")
         }
     }
+}
+
+enum MealType: String {
+    case favorite
+    case custom
 }
 
