@@ -9,10 +9,6 @@ import SwiftUI
 
 struct SpenceView: View {
     
-//    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//    var nextVC: ViewController {
-//        storyboard.instantiateViewController(identifier: "ViewController")
-//    }
     
     var body: some View {
         NavigationView {

@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-class FirstTimeUseVC: UIHostingController<MaherView> {
+class FirstTimeUseVC: UIHostingController<SpenceView> {
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder, rootView: MaherView())
+        super.init(coder: aDecoder, rootView: SpenceView())
         
     }
 
