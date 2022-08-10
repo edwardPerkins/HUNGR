@@ -10,7 +10,11 @@
 		0B7D6A2628A2C7D0008515D5 /* IngredientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7D6A2428A2C7D0008515D5 /* IngredientTableViewCell.swift */; };
 		0B7D6A2728A2C7D0008515D5 /* IngredientTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7D6A2528A2C7D0008515D5 /* IngredientTableViewCell.xib */; };
 		0B7D6A2B28A2E38E008515D5 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7D6A2A28A2E38E008515D5 /* TableViewCell.xib */; };
+		89DDB61F28A2E79B00934303 /* hungr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 89DDB61D28A2E79B00934303 /* hungr.xcdatamodeld */; };
+		89DDB62128A3013300934303 /* MealModel+ConvertData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DDB62028A3013300934303 /* MealModel+ConvertData.swift */; };
+
 		0B7D6A2D28A32BDD008515D5 /* FirstTimeUseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7D6A2C28A32BDD008515D5 /* FirstTimeUseView.swift */; };
+
 		C9EBAD1328A1540F007C70C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD1228A1540F007C70C2 /* AppDelegate.swift */; };
 		C9EBAD1528A1540F007C70C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD1428A1540F007C70C2 /* SceneDelegate.swift */; };
 		C9EBAD1728A1540F007C70C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD1628A1540F007C70C2 /* ViewController.swift */; };
@@ -39,7 +43,11 @@
 		0B7D6A2428A2C7D0008515D5 /* IngredientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTableViewCell.swift; sourceTree = "<group>"; };
 		0B7D6A2528A2C7D0008515D5 /* IngredientTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientTableViewCell.xib; sourceTree = "<group>"; };
 		0B7D6A2A28A2E38E008515D5 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+
+		89DDB61E28A2E79B00934303 /* hungr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = hungr.xcdatamodel; sourceTree = "<group>"; };
+		89DDB62028A3013300934303 /* MealModel+ConvertData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MealModel+ConvertData.swift"; sourceTree = "<group>"; };
 		0B7D6A2C28A32BDD008515D5 /* FirstTimeUseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeUseView.swift; sourceTree = "<group>"; };
+
 		C9EBAD0F28A1540F007C70C2 /* hungr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hungr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9EBAD1228A1540F007C70C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9EBAD1428A1540F007C70C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				C9EBAD3B28A15EC0007C70C2 /* DataManger.swift */,
+				89DDB61D28A2E79B00934303 /* hungr.xcdatamodeld */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -194,6 +203,7 @@
 			children = (
 				C9EBAD4828A16154007C70C2 /* MealTableCell */,
 				C9EBAD4628A16137007C70C2 /* MealModel.swift */,
+				89DDB62028A3013300934303 /* MealModel+ConvertData.swift */,
 				D913014328A2BC0D00AB4B88 /* UIColor+newColors.swift */,
 			);
 			name = SharedResources;
@@ -318,7 +328,11 @@
 				C9EBAD3628A15E6C007C70C2 /* FavoritesVC.swift in Sources */,
 				C9EBAD4128A15F43007C70C2 /* StringConstants.swift in Sources */,
 				C9EBAD1728A1540F007C70C2 /* ViewController.swift in Sources */,
+
+				89DDB62128A3013300934303 /* MealModel+ConvertData.swift in Sources */,
+
 				0B7D6A2D28A32BDD008515D5 /* FirstTimeUseView.swift in Sources */,
+
 				C9EBAD1328A1540F007C70C2 /* AppDelegate.swift in Sources */,
 				C9EBAD4428A160C4007C70C2 /* FirstTimeUseVC.swift in Sources */,
 				C9EBAD4B28A16186007C70C2 /* TableViewCell.swift in Sources */,
@@ -332,6 +346,7 @@
 				C9EBAD3128A15DFC007C70C2 /* FavoritesVM.swift in Sources */,
 				C9EBAD3428A15E2A007C70C2 /* SearchVM.swift in Sources */,
 				C9EBAD5528A167CC007C70C2 /* ViewController+Delegate.swift in Sources */,
+				89DDB61F28A2E79B00934303 /* hungr.xcdatamodeld in Sources */,
 				C9EBAD1528A1540F007C70C2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -550,6 +565,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		89DDB61D28A2E79B00934303 /* hungr.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				89DDB61E28A2E79B00934303 /* hungr.xcdatamodel */,
+			);
+			currentVersion = 89DDB61E28A2E79B00934303 /* hungr.xcdatamodel */;
+			path = hungr.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C9EBAD0728A1540F007C70C2 /* Project object */;
 }

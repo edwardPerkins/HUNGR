@@ -10,10 +10,14 @@ import UIKit
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
+                
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        DataManager.shared.getFavMeals { loadedMeals in
+            for meal in loadedMeals {
+                print(meal)
+            }
+        }
     }
-
-
 }
 
