@@ -31,4 +31,17 @@ class NetWorkManager{
         }.resume()
     }
     
+    func fetchImageData(url: String, completion: @escaping (Data) -> Void) {
+        
+        guard let url = URL(string: url) else { return }
+        
+        URLSession.shared.dataTask(with: url) { data, _, _ in
+            
+            guard let data = data else { return }
+            
+            completion(data)
+            
+        }.resume()
+    }
+    
 }
