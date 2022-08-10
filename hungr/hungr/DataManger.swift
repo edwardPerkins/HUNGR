@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import CoreData
 
-class DataManager{
+final class DataManager{
     static let shared = DataManager()
     
     private let context: NSManagedObjectContext?
