@@ -26,7 +26,7 @@
 		C9EBAD3C28A15EC0007C70C2 /* DataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD3B28A15EC0007C70C2 /* DataManger.swift */; };
 		C9EBAD4128A15F43007C70C2 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD4028A15F43007C70C2 /* StringConstants.swift */; };
 		C9EBAD4428A160C4007C70C2 /* FirstTimeUseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD4328A160C4007C70C2 /* FirstTimeUseVC.swift */; };
-		C9EBAD4728A16137007C70C2 /* MealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD4628A16137007C70C2 /* MealModel.swift */; };
+		C9EBAD4728A16137007C70C2 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD4628A16137007C70C2 /* Models.swift */; };
 		C9EBAD4B28A16186007C70C2 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD4928A16186007C70C2 /* TableViewCell.swift */; };
 		C9EBAD4E28A161B3007C70C2 /* FavoritesVC+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD4D28A161B3007C70C2 /* FavoritesVC+Delegate.swift */; };
 		C9EBAD5028A161C5007C70C2 /* FavoritesVC+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD4F28A161C5007C70C2 /* FavoritesVC+DataSource.swift */; };
@@ -62,7 +62,7 @@
 		C9EBAD3B28A15EC0007C70C2 /* DataManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManger.swift; sourceTree = "<group>"; };
 		C9EBAD4028A15F43007C70C2 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
 		C9EBAD4328A160C4007C70C2 /* FirstTimeUseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeUseVC.swift; sourceTree = "<group>"; };
-		C9EBAD4628A16137007C70C2 /* MealModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealModel.swift; sourceTree = "<group>"; };
+		C9EBAD4628A16137007C70C2 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		C9EBAD4928A16186007C70C2 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		C9EBAD4D28A161B3007C70C2 /* FavoritesVC+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoritesVC+Delegate.swift"; sourceTree = "<group>"; };
 		C9EBAD4F28A161C5007C70C2 /* FavoritesVC+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoritesVC+DataSource.swift"; sourceTree = "<group>"; };
@@ -152,7 +152,6 @@
 			children = (
 				C9EBAD5128A161CC007C70C2 /* ViewControllers */,
 				C9EBAD3028A15DFC007C70C2 /* FavoritesVM.swift */,
-				D04D484828A4274700415033 /* Main.storyboard */,
 			);
 			name = Favorites;
 			sourceTree = "<group>";
@@ -162,6 +161,7 @@
 			children = (
 				C9EBAD5328A167A3007C70C2 /* ViewController */,
 				C9EBAD3328A15E2A007C70C2 /* SearchVM.swift */,
+				D04D484828A4274700415033 /* Main.storyboard */,
 			);
 			name = Search;
 			sourceTree = "<group>";
@@ -205,7 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				C9EBAD4828A16154007C70C2 /* MealTableCell */,
-				C9EBAD4628A16137007C70C2 /* MealModel.swift */,
+				C9EBAD4628A16137007C70C2 /* Models.swift */,
 				D04D484A28A4286800415033 /* Meal.swift */,
 				89DDB62028A3013300934303 /* MealModel+ConvertData.swift */,
 				D913014328A2BC0D00AB4B88 /* UIColor+newColors.swift */,
@@ -347,7 +347,7 @@
 				C9EBAD5028A161C5007C70C2 /* FavoritesVC+DataSource.swift in Sources */,
 				C9EBAD2928A15A07007C70C2 /* MealDetailsVM.swift in Sources */,
 				C9EBAD3928A15E9D007C70C2 /* NetWorkManager.swift in Sources */,
-				C9EBAD4728A16137007C70C2 /* MealModel.swift in Sources */,
+				C9EBAD4728A16137007C70C2 /* Models.swift in Sources */,
 				C9EBAD3128A15DFC007C70C2 /* FavoritesVM.swift in Sources */,
 				C9EBAD3428A15E2A007C70C2 /* SearchVM.swift in Sources */,
 				C9EBAD5528A167CC007C70C2 /* ViewController+Delegate.swift in Sources */,
