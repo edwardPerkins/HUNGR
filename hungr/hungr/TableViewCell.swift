@@ -8,7 +8,11 @@
 import UIKit
 
 class TableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var recipeTitleLabel: UIView!
+    @IBOutlet weak var recipeImageLabel: UIView!
+    @IBOutlet weak var favoriteOutlet: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
