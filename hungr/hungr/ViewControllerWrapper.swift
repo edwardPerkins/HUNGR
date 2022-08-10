@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct ViewControllerWrapper: UIViewControllerRepresentable {
+    
+    init() {
+        UserDefaults.standard.set(true, forKey: "usedBefore")
+        print("set to true")
+    }
 
     typealias UIViewControllerType = ViewController
 

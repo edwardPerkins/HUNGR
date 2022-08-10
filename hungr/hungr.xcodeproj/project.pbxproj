@@ -30,6 +30,7 @@
 		C9EBAD5728A167E1007C70C2 /* ViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD5628A167E1007C70C2 /* ViewController+DataSource.swift */; };
 		D046B59428A2DBBA005A548A /* MealDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D046B59328A2DBBA005A548A /* MealDetailsView.swift */; };
 		D046B59628A2EE43005A548A /* MealDetailsHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D046B59528A2EE43005A548A /* MealDetailsHost.swift */; };
+		D04D484328A4094D00415033 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D484228A4094D00415033 /* Meal.swift */; };
 		D0E26FF828A34051007F310E /* SpenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E26FF728A34051007F310E /* SpenceView.swift */; };
 		D0E26FFC28A34CF2007F310E /* ViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E26FFB28A34CF2007F310E /* ViewControllerWrapper.swift */; };
 		D913014428A2BC0D00AB4B88 /* UIColor+newColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D913014328A2BC0D00AB4B88 /* UIColor+newColors.swift */; };
@@ -61,6 +62,7 @@
 		C9EBAD5628A167E1007C70C2 /* ViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+DataSource.swift"; sourceTree = "<group>"; };
 		D046B59328A2DBBA005A548A /* MealDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsView.swift; sourceTree = "<group>"; };
 		D046B59528A2EE43005A548A /* MealDetailsHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsHost.swift; sourceTree = "<group>"; };
+		D04D484228A4094D00415033 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		D0E26FF728A34051007F310E /* SpenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpenceView.swift; sourceTree = "<group>"; };
 		D0E26FFB28A34CF2007F310E /* ViewControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerWrapper.swift; sourceTree = "<group>"; };
 		D913014328A2BC0D00AB4B88 /* UIColor+newColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+newColors.swift"; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 			children = (
 				C9EBAD1628A1540F007C70C2 /* ViewController.swift */,
 				D0E26FFB28A34CF2007F310E /* ViewControllerWrapper.swift */,
+				D04D484228A4094D00415033 /* Meal.swift */,
 				C9EBAD5428A167CC007C70C2 /* ViewController+Delegate.swift */,
 				C9EBAD5628A167E1007C70C2 /* ViewController+DataSource.swift */,
 			);
@@ -328,6 +331,7 @@
 				C9EBAD5028A161C5007C70C2 /* FavoritesVC+DataSource.swift in Sources */,
 				C9EBAD2928A15A07007C70C2 /* MealDetailsVM.swift in Sources */,
 				C9EBAD3928A15E9D007C70C2 /* NetWorkManager.swift in Sources */,
+				D04D484328A4094D00415033 /* Meal.swift in Sources */,
 				C9EBAD4728A16137007C70C2 /* MealModel.swift in Sources */,
 				C9EBAD3128A15DFC007C70C2 /* FavoritesVM.swift in Sources */,
 				C9EBAD3428A15E2A007C70C2 /* SearchVM.swift in Sources */,
