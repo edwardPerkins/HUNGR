@@ -11,7 +11,7 @@ struct FirstTimeUseView: View {
     var body: some View {
         ZStack {
             // background
-            Color(UIColor.Background ?? .orange)
+            Color.background
                 .ignoresSafeArea()
             
             // content
@@ -30,16 +30,16 @@ extension FirstTimeUseView {
     var welcomeSection: some View {
         Text("WELCOME!!!!!!")
             .font(.system(size: 45.0))
-            .foregroundColor(Color(uiColor: UIColor.AccentOne ?? .systemMint))
+            .foregroundColor(.accentOne)
             .padding(.vertical, 10)
             .padding(.horizontal, 25)
-            .background(Color(uiColor: UIColor.AccentTwo ?? .yellow))
+            .background(Color.accentTwo)
     }
     
     var thankYouSection: some View {
         Text(FirstTimeUse.thankYouMessage.rawValue)
             .font(.system(size: 33.0))
-            .foregroundColor(Color(uiColor: UIColor.TextColor ?? .darkGray))
+            .foregroundColor(.textColor)
             .padding()
             .multilineTextAlignment(.center)
     }
@@ -48,7 +48,7 @@ extension FirstTimeUseView {
         Image(systemName: "fork.knife.circle.fill")
             .resizable()
             .frame(width: 275, height: 275)
-            .foregroundColor(Color(uiColor: UIColor.AccentTwo ?? .yellow))
+            .foregroundColor(.accentTwo)
             .padding(.bottom, 55)
     }
     
@@ -57,15 +57,22 @@ extension FirstTimeUseView {
                label: {
                 Text("Continue")
                     .font(.system(size: 40.0))
-                    .foregroundColor(Color(uiColor: UIColor.AccentOne ?? .systemMint))
+                    .foregroundColor(.accentOne)
                 }
         )
         .frame(width: UIScreen.main.bounds.width - 40, alignment: .center)
-        .padding(.vertical)
-        .background(Color(uiColor: UIColor.AccentTwo ?? .yellow))
+        .padding(.vertical, 7)
+        .background(Color.accentTwo)
         .cornerRadius(8)
     }
     
+}
+
+extension Color {
+    static let background = Color(uiColor: .Background ?? .clear)
+    static let textColor = Color(uiColor: .TextColor ?? .clear)
+    static let accentOne = Color(uiColor: .AccentOne ?? .clear)
+    static let accentTwo = Color(uiColor: .AccentTwo ?? .clear)
 }
 
 struct FirstTimeUseView_Previews: PreviewProvider {
