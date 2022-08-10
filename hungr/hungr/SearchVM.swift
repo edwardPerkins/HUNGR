@@ -8,6 +8,6 @@
 import Foundation
 
 class SearchVM{
-    var mealModel: [MealModel]? = nil
+    var mealModel: [Meal]? = nil
     
 }
