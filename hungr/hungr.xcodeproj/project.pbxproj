@@ -11,6 +11,8 @@
 		0B7D6A2728A2C7D0008515D5 /* IngredientTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7D6A2528A2C7D0008515D5 /* IngredientTableViewCell.xib */; };
 		0B7D6A2B28A2E38E008515D5 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7D6A2A28A2E38E008515D5 /* TableViewCell.xib */; };
 		0B7D6A2D28A32BDD008515D5 /* FirstTimeUseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7D6A2C28A32BDD008515D5 /* FirstTimeUseView.swift */; };
+		0BCDD24028A5670700F6ADC6 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCDD23E28A5670700F6ADC6 /* CollectionViewCell.swift */; };
+		0BCDD24128A5670700F6ADC6 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BCDD23F28A5670700F6ADC6 /* CollectionViewCell.xib */; };
 		89DDB61F28A2E79B00934303 /* hungr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 89DDB61D28A2E79B00934303 /* hungr.xcdatamodeld */; };
 		89DDB62128A3013300934303 /* MealModel+ConvertData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DDB62028A3013300934303 /* MealModel+ConvertData.swift */; };
 		C7A80FC528A4284800F2EB48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A80FC428A4284800F2EB48 /* Main.storyboard */; };
@@ -48,6 +50,8 @@
 		0B7D6A2528A2C7D0008515D5 /* IngredientTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientTableViewCell.xib; sourceTree = "<group>"; };
 		0B7D6A2A28A2E38E008515D5 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		0B7D6A2C28A32BDD008515D5 /* FirstTimeUseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeUseView.swift; sourceTree = "<group>"; };
+		0BCDD23E28A5670700F6ADC6 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		0BCDD23F28A5670700F6ADC6 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		89DDB61E28A2E79B00934303 /* hungr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = hungr.xcdatamodel; sourceTree = "<group>"; };
 		89DDB62028A3013300934303 /* MealModel+ConvertData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MealModel+ConvertData.swift"; sourceTree = "<group>"; };
 		C7A80FC428A4284800F2EB48 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -93,6 +97,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BCDD23D28A566EA00F6ADC6 /* MealCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				0BCDD23E28A5670700F6ADC6 /* CollectionViewCell.swift */,
+				0BCDD23F28A5670700F6ADC6 /* CollectionViewCell.xib */,
+			);
+			name = MealCollectionCell;
+			sourceTree = "<group>";
+		};
 		C9EBAD0628A1540F007C70C2 = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +223,7 @@
 		C9EBAD4528A1611E007C70C2 /* SharedResources */ = {
 			isa = PBXGroup;
 			children = (
+				0BCDD23D28A566EA00F6ADC6 /* MealCollectionCell */,
 				C9EBAD4828A16154007C70C2 /* MealTableCell */,
 				C9EBAD4628A16137007C70C2 /* Models.swift */,
 				89DDB62028A3013300934303 /* MealModel+ConvertData.swift */,
@@ -327,6 +341,7 @@
 				D04D484D28A44D9C00415033 /* FirstTimeUse.storyboard in Resources */,
 				D913014828A4250200AB4B88 /* SearchByLetter.storyboard in Resources */,
 				C7A80FC528A4284800F2EB48 /* Main.storyboard in Resources */,
+				0BCDD24128A5670700F6ADC6 /* CollectionViewCell.xib in Resources */,
 				C9EBAD1C28A15410007C70C2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,6 +363,7 @@
 				C9EBAD1728A1540F007C70C2 /* ViewController.swift in Sources */,
 				89DDB62128A3013300934303 /* MealModel+ConvertData.swift in Sources */,
 				0B7D6A2D28A32BDD008515D5 /* FirstTimeUseView.swift in Sources */,
+				0BCDD24028A5670700F6ADC6 /* CollectionViewCell.swift in Sources */,
 				C9EBAD1328A1540F007C70C2 /* AppDelegate.swift in Sources */,
 				C9EBAD4428A160C4007C70C2 /* FirstTimeUseVC.swift in Sources */,
 				C9EBAD4B28A16186007C70C2 /* TableViewCell.swift in Sources */,
