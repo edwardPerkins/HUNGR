@@ -9,13 +9,15 @@ import Foundation
 
 class SearchVM {
 
-    var mealList: [MealDetailsVM]!
+    private var mealList: [MealDetailsVM]?
     
     var update: () -> Void = {}
     
+    var mealCount: Int { mealList?.count ?? 0}
     
-    func getDestinationVM(at index: Int) -> MealDetailsVM {
-        mealList[index]
+    
+    func getDestinationVM(at index: Int) -> MealDetailsVM? {
+        mealList?[index]
     }
     
     func getMealsByLetter(letter: String, completion: @escaping () -> Void) {

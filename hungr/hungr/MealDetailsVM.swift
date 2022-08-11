@@ -8,12 +8,17 @@
 import Foundation
 
 
-class MealDetailsVM{
+class MealDetailsVM {
     
     init(_ meal: Meal) {
         name = meal.name
         instructions = meal.instructions
         ingredients = meal.ingredients
+        imageData = Data()
+        
+        NetWorkManager.shared.fetchImageData(url: meal.imageURL) { data in
+            self.imageData = data
+        }
     }
     
     
@@ -27,4 +32,5 @@ class MealDetailsVM{
     
     var instructions: String
     
+    var imageData: Data
 }

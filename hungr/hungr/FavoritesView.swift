@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct FavoritesView: View {
-    let favVM = FavoritesVM()
+//    let favVM = FavoritesVM()
+    let favoriteMeals: [String] = []
+    
     
     var body: some View {
         ZStack {
@@ -17,9 +19,9 @@ struct FavoritesView: View {
                 Text("Favorites").font(.largeTitle)
                     .foregroundColor(.textColor)
                 List {
-                    ForEach(favVM.favoriteMeals, id: \.self) { favMeal in
+                    ForEach(favoriteMeals, id: \.self) { favMeal in
                         VStack {
-                            Text(favMeal.name)
+                            Text(favMeal)
                                 .foregroundColor(.textColor)
                                 .font(.title2)
                             HStack {
