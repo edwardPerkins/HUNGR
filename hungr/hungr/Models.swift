@@ -12,12 +12,14 @@ struct Meals: Decodable {
 }
 
 struct Meal {
+    let id: String
     let name: String
     let instructions: String
     let imageURL: String
     var ingredients: [Ingredient]
     
     enum CodingKeys: String, CodingKey {
+        case idMeal
         case strMeal
         case strInstructions
         case strMealThumb
@@ -67,6 +69,4 @@ struct Meal {
         let name: String
         let amount: String
     }
-
-    
 }
