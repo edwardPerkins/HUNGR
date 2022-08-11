@@ -19,7 +19,9 @@ class SearchByLetterViewController: UIViewController {
 //            print("RECIPE COUNT", self.viewModel.mealModel?.count)
 //        }
         guard let viewModel = viewModel else { return }
-        viewModel.getMealsByLetter(letter: label)
+        viewModel.getMealsByLetter(letter: label, completion: {
+            
+        })
 //        present(ViewController(), animated: true)
         navigationController?.popViewController(animated: true)
     }

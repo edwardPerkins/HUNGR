@@ -24,10 +24,10 @@ class SearchVM {
     
     
     func getRandomMeal() -> MealDetailsVM? {
-        MealDetailsVM(mealList?.meals.randomElement())
+        MealDetailsVM(mealList?.meals?.randomElement())
     }
     func getDestination(index: Int) -> MealDetailsView {
-        let vm = MealDetailsVM(mealList?.meals[index])
+        let vm = MealDetailsVM(mealList?.meals?[index])
         return MealDetailsView(vm: vm)
     }
     func getMealsByLetter(letter: String, completion: @escaping () -> Void) {
