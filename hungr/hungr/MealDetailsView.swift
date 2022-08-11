@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct MealDetailsView: View {
-    let vm = MealDetailsVM()
+    
+    let vm: MealDetailsVM
     
     var body: some View {
         VStack {
@@ -48,8 +49,8 @@ struct MealDetailsView: View {
     }
 }
 
-struct MealDetailsView_Previews: PreviewProvider {
-    static var previews: some View {
-        MealDetailsView()
-    }
-}
+//struct MealDetailsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MealDetailsView
+//    }
+//}

@@ -7,27 +7,27 @@
 
 import Foundation
 
-class SearchVM{
-    
-//    var mealModel: [MealModel]? = nil
+class SearchVM {
 
-    var mealList: Meals!
-    
-    
-    
-    func getRandomMeal() -> MealDetailsVM? {
-        MealDetailsVM(mealList.meals.randomElement())
+    var mealList: Meals? {
+        didSet{
+            print("view model fired")
+            update()
+            
+        }
     }
     
-    func getMealsByLetter(letter: String, completion: @escaping () -> Void) {
+    var update: () -> Void = {}
+    
+    func getMealsByLetter(letter: String) {
         
         let url = "https://www.themealdb.com/api/json/v1/1/search.php?f=\(letter)"
         
         NetWorkManager.shared.fetchData(url: url) { (data: Meals?) in
 
             guard let data = data else { return }
-            self.mealList.meals = data.meals
-            completion()
+            self.mealList = data
         }
     }
+    
 }

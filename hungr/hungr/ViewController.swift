@@ -11,40 +11,22 @@ import SwiftUI
 
 class ViewController: UIViewController {    
     @IBOutlet weak var mainTableView: UITableView!
+    
     let viewModel = SearchVM()
-    var mealList: Meals? {
-        didSet {
-            print(mealList?.meals[0].name, mealList?.meals[0].ingredients)
-        }
-    }
-
-    let urlString = "https://www.themealdb.com/api/json/v1/1/random.php"
-
-    @IBAction func letterButton(_ sender: UIButton) {
-        
-        guard let label = sender.titleLabel?.text?.lowercased() else { return }
-//        viewModel.getMealsByLetter(letter: label) {
-//            print("RECIPE COUNT", self.viewModel.mealModel?.count)
-//        }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as? SearchByLetterViewController
+        vc?.viewModel = self.viewModel
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        DataManager.shared.getMeals(type: .favorite) { loadedMeals in
-            for meal in loadedMeals {
-                print(meal)
-//        DataManager.shared.getFavMeals { loadedMeals in
-//            for meal in loadedMeals {
-//                print(meal)
-//            }
-//        }
         
-            NetWorkManager.shared.fetchData(url: urlString) { meals in
-                self.mealList = meals
+        viewModel.update = {
             
-
+            DispatchQueue.main.async { [weak self] in
+                self?.mainTableView.reloadData()
             }
-
         }
         
         configureTable()
@@ -57,7 +39,10 @@ class ViewController: UIViewController {
         mainTableView.register(nib, forCellReuseIdentifier: "Cell")
     }
     
-}
+//    @IBAction func onClickFeelingLucky(_ sender: Any) {
+//        let host = UIHostingController(rootView: MealDetailsView(vm: <#MealDetailsVM#>))
+//        navigationController?.pushViewController(host, animated: true)
+//    }
 }
 
 extension ViewController: UITableViewDataSource {
@@ -74,17 +59,6 @@ extension ViewController: UITableViewDataSource {
         10
 
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let destination = MealDetailsView()
-        let host = UIHostingController(rootView: destination)
-        navigationController?.pushViewController(host, animated: true)
-    }
-    @IBAction func onClickFeelingLucky(_ sender: Any) {
-        let host = UIHostingController(rootView: MealDetailsView())
-        navigationController?.pushViewController(host, animated: true)
-    }
-    
     
 }
 

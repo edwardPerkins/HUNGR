@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-class MealDetailsHost: UIHostingController<MealDetailsView> {
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder, rootView: MealDetailsView())
-        
-    }
-}
+//class MealDetailsHost: UIHostingController<MealDetailsView> {
+//    required init?(coder aDecoder: NSCoder) {
+//        super.init(coder: aDecoder, rootView: MealDetailsView())
+//
+//    }
+//}
