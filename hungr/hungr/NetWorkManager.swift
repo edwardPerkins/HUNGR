@@ -12,7 +12,7 @@ class NetWorkManager{
     
     private init(){}
     
-    let shared = NetWorkManager()
+    static let shared = NetWorkManager()
     
     func fetchData<T: Codable>(url: String, completion: @escaping (T) -> Void) {
         
