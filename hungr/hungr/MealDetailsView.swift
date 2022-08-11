@@ -48,6 +48,7 @@ struct MealDetailsView: View {
     }
 }
 
+
 struct MealDetailsView_Previews: PreviewProvider {
     static var previews: some View {
         MealDetailsView(vm: .init(.init(id: "af", name: "af", instructions: "af", imageURL: "af", ingredients: [.init(name: "as", amount: "asf")])))
