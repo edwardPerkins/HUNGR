@@ -50,16 +50,9 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // TODO: find a way to navigate to a SwiftUI view when cell is tapped
-        
-        // MARK: method 1:
         let destination = MealDetailsView()
         let host = UIHostingController(rootView: destination)
         navigationController?.pushViewController(host, animated: true)
-        
-        // MARK: method 2:
-//        let destinationViewController = navigationController?.storyboard?.instantiateViewControllerWithIdentifier("MealDetailsView") as? KevinsViewController
-//        navigationController?.pushViewController(destinationViewController, animated: true)
     }
     
 }
