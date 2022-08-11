@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MealDetailsView: View {
-    let vm = MealDetailsVM()
+    let vm: MealDetailsVM
     
     var body: some View {
         VStack {
@@ -50,6 +50,6 @@ struct MealDetailsView: View {
 
 struct MealDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        MealDetailsView()
+        MealDetailsView(vm: .init(.init(id: "af", name: "af", instructions: "af", imageURL: "af", ingredients: [.init(name: "as", amount: "asf")])))
     }
 }
