@@ -9,7 +9,11 @@ import Foundation
 
 
 class MealDetailsVM{
-    let meal: MealModel? = nil
+    let meal: Meal?
+    
+    init(_ meal: Meal?) {
+        self.meal = meal
+    }
     
     
     var listheight: Int {
