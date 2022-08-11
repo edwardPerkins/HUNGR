@@ -1,4 +1,4 @@
-//
+ //
 //  NetWorkManager.swift
 //  hungr
 //
@@ -8,13 +8,13 @@
 import Foundation
 
 
-class NetWorkManager{
+final class NetWorkManager{
     
     private init(){}
     
     static let shared = NetWorkManager()
     
-    func fetchData<T: Codable>(url: String, completion: @escaping (T) -> Void) {
+    func fetchData<T: Decodable>(url: String, completion: @escaping (T) -> Void) {
         
         guard let url = URL(string: url) else { return }
         
