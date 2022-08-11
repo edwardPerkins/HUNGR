@@ -45,37 +45,7 @@ class ViewController: UIViewController {
 //    }
 }
 
-extension ViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as? TableViewCell {
-//            cell.recipeImageLabel.text = MealModel.strMeal
-            return cell
-        }
-        return UITableViewCell()
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // number of rows
-        10
-
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let destinationVM = viewModel.getDestinationVM(at: indexPath.row)
-        let destination = MealDetailsView(vm: destinationVM)
-        let host = UIHostingController(rootView: destination)
-        navigationController?.pushViewController(host, animated: true)
-    }
-    
-    
-}
 
 
-extension ViewController: UITableViewDelegate {
-    
-    // height for each row:
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        190
-    }
-    
-}
+
+
