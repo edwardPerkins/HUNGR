@@ -10,10 +10,10 @@ import Foundation
 extension Meal: Decodable {
     init(from decoder: Decoder) throws {
         let data = try decoder.container(keyedBy: CodingKeys.self)
+        id = try data.decode(String.self, forKey: .idMeal)
         name = try data.decode(String.self, forKey: .strMeal)
         instructions = try data.decode(String.self, forKey: .strInstructions)
         imageURL = try data.decode(String.self, forKey: .strMealThumb)
-        
         ingredients = []
         
         let strIngredient1 = try data.decode(Optional<String>.self, forKey: .strIngredient1)

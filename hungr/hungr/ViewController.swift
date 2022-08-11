@@ -9,7 +9,6 @@ import UIKit
 import SwiftUI
 
 class ViewController: UIViewController {
-
     
     @IBOutlet weak var mainTableView: UITableView!
     
@@ -21,7 +20,6 @@ class ViewController: UIViewController {
     let urlString = "https://www.themealdb.com/api/json/v1/1/random.php"
 
     override func viewDidLoad() {
-                
         super.viewDidLoad()
         
 //        DataManager.shared.getFavMeals { loadedMeals in
