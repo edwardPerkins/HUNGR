@@ -14,6 +14,8 @@
 		89DDB61F28A2E79B00934303 /* hungr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 89DDB61D28A2E79B00934303 /* hungr.xcdatamodeld */; };
 		89DDB62128A3013300934303 /* MealModel+ConvertData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DDB62028A3013300934303 /* MealModel+ConvertData.swift */; };
 		C7A80FC528A4284800F2EB48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A80FC428A4284800F2EB48 /* Main.storyboard */; };
+		C9947B5928A55CAC00BC19D4 /* Meal+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9947B5828A55CAC00BC19D4 /* Meal+Decodable.swift */; };
+
 		C9EBAD1328A1540F007C70C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD1228A1540F007C70C2 /* AppDelegate.swift */; };
 		C9EBAD1528A1540F007C70C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD1428A1540F007C70C2 /* SceneDelegate.swift */; };
 		C9EBAD1728A1540F007C70C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD1628A1540F007C70C2 /* ViewController.swift */; };
@@ -38,6 +40,10 @@
 		D04D484928A4274700415033 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D04D484828A4274700415033 /* Main.storyboard */; };
 		D04D484B28A4286800415033 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D484A28A4286800415033 /* Meal.swift */; };
 		D0E26FFC28A34CF2007F310E /* ViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E26FFB28A34CF2007F310E /* ViewControllerWrapper.swift */; };
+
+		D04D484D28A44D9C00415033 /* FirstTimeUse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D04D484C28A44D9C00415033 /* FirstTimeUse.storyboard */; };
+		D04D484F28A4547800415033 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D484E28A4547800415033 /* TabViewController.swift */; };
+		D0E26FFC28A34CF2007F310E /* TabViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E26FFB28A34CF2007F310E /* TabViewRepresentable.swift */; };
 		D913014428A2BC0D00AB4B88 /* UIColor+newColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D913014328A2BC0D00AB4B88 /* UIColor+newColors.swift */; };
 		D913014828A4250200AB4B88 /* SearchByLetter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D913014728A4250200AB4B88 /* SearchByLetter.storyboard */; };
 		D913014A28A55A8900AB4B88 /* SearchByLetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D913014928A55A8900AB4B88 /* SearchByLetterViewController.swift */; };
@@ -51,6 +57,7 @@
 		89DDB61E28A2E79B00934303 /* hungr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = hungr.xcdatamodel; sourceTree = "<group>"; };
 		89DDB62028A3013300934303 /* MealModel+ConvertData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MealModel+ConvertData.swift"; sourceTree = "<group>"; };
 		C7A80FC428A4284800F2EB48 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C9947B5828A55CAC00BC19D4 /* Meal+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+Decodable.swift"; sourceTree = "<group>"; };
 		C9EBAD0F28A1540F007C70C2 /* hungr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hungr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9EBAD1228A1540F007C70C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9EBAD1428A1540F007C70C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,9 +81,15 @@
 		C9EBAD5628A167E1007C70C2 /* ViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+DataSource.swift"; sourceTree = "<group>"; };
 		D046B59328A2DBBA005A548A /* MealDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsView.swift; sourceTree = "<group>"; };
 		D046B59528A2EE43005A548A /* MealDetailsHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsHost.swift; sourceTree = "<group>"; };
+
 		D04D484828A4274700415033 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D04D484A28A4286800415033 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		D0E26FFB28A34CF2007F310E /* ViewControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerWrapper.swift; sourceTree = "<group>"; };
+
+		D04D484C28A44D9C00415033 /* FirstTimeUse.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstTimeUse.storyboard; sourceTree = "<group>"; };
+		D04D484E28A4547800415033 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		D0E26FFB28A34CF2007F310E /* TabViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewRepresentable.swift; sourceTree = "<group>"; };
+
 		D913014328A2BC0D00AB4B88 /* UIColor+newColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+newColors.swift"; sourceTree = "<group>"; };
 		D913014728A4250200AB4B88 /* SearchByLetter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchByLetter.storyboard; sourceTree = "<group>"; };
 		D913014928A55A8900AB4B88 /* SearchByLetterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchByLetterViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +139,7 @@
 		C9EBAD2628A1599F007C70C2 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
+				C9EBAD1D28A15410007C70C2 /* LaunchScreen.storyboard */,
 				C9EBAD1228A1540F007C70C2 /* AppDelegate.swift */,
 				C9EBAD1428A1540F007C70C2 /* SceneDelegate.swift */,
 				C9EBAD2028A15410007C70C2 /* Info.plist */,
@@ -167,7 +181,6 @@
 			children = (
 				C9EBAD5328A167A3007C70C2 /* ViewController */,
 				C9EBAD3328A15E2A007C70C2 /* SearchVM.swift */,
-				D04D484828A4274700415033 /* Main.storyboard */,
 			);
 			name = Search;
 			sourceTree = "<group>";
@@ -201,7 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				C9EBAD4328A160C4007C70C2 /* FirstTimeUseVC.swift */,
-				C9EBAD1D28A15410007C70C2 /* LaunchScreen.storyboard */,
+				D04D484C28A44D9C00415033 /* FirstTimeUse.storyboard */,
 				0B7D6A2C28A32BDD008515D5 /* FirstTimeUseView.swift */,
 			);
 			name = FirstTimeUse;
@@ -212,9 +225,9 @@
 			children = (
 				C9EBAD4828A16154007C70C2 /* MealTableCell */,
 				C9EBAD4628A16137007C70C2 /* Models.swift */,
-				D04D484A28A4286800415033 /* Meal.swift */,
 				89DDB62028A3013300934303 /* MealModel+ConvertData.swift */,
 				D913014328A2BC0D00AB4B88 /* UIColor+newColors.swift */,
+				C9947B5828A55CAC00BC19D4 /* Meal+Decodable.swift */,
 			);
 			name = SharedResources;
 			sourceTree = "<group>";
@@ -253,10 +266,13 @@
 			isa = PBXGroup;
 			children = (
 				C9EBAD1628A1540F007C70C2 /* ViewController.swift */,
-				D0E26FFB28A34CF2007F310E /* ViewControllerWrapper.swift */,
+				D0E26FFB28A34CF2007F310E /* TabViewRepresentable.swift */,
+				D04D484E28A4547800415033 /* TabViewController.swift */,
 				C9EBAD5428A167CC007C70C2 /* ViewController+Delegate.swift */,
 				C9EBAD5628A167E1007C70C2 /* ViewController+DataSource.swift */,
+
 				D913014928A55A8900AB4B88 /* SearchByLetterViewController.swift */,
+
 				D913014728A4250200AB4B88 /* SearchByLetter.storyboard */,
 				C7A80FC428A4284800F2EB48 /* Main.storyboard */,
 			);
@@ -322,9 +338,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B7D6A2728A2C7D0008515D5 /* IngredientTableViewCell.xib in Resources */,
-				D04D484928A4274700415033 /* Main.storyboard in Resources */,
 				0B7D6A2B28A2E38E008515D5 /* TableViewCell.xib in Resources */,
 				C9EBAD1F28A15410007C70C2 /* LaunchScreen.storyboard in Resources */,
+
+				D04D484D28A44D9C00415033 /* FirstTimeUse.storyboard in Resources */,
+
 				D913014828A4250200AB4B88 /* SearchByLetter.storyboard in Resources */,
 				C7A80FC528A4284800F2EB48 /* Main.storyboard in Resources */,
 				C9EBAD1C28A15410007C70C2 /* Assets.xcassets in Resources */,
@@ -340,12 +358,11 @@
 			files = (
 				0B7D6A2628A2C7D0008515D5 /* IngredientTableViewCell.swift in Sources */,
 				C9EBAD4E28A161B3007C70C2 /* FavoritesVC+Delegate.swift in Sources */,
-				D04D484B28A4286800415033 /* Meal.swift in Sources */,
 				C9EBAD5728A167E1007C70C2 /* ViewController+DataSource.swift in Sources */,
 				C9EBAD3628A15E6C007C70C2 /* FavoritesVC.swift in Sources */,
 				D046B59628A2EE43005A548A /* MealDetailsHost.swift in Sources */,
 				C9EBAD4128A15F43007C70C2 /* StringConstants.swift in Sources */,
-				D0E26FFC28A34CF2007F310E /* ViewControllerWrapper.swift in Sources */,
+				D0E26FFC28A34CF2007F310E /* TabViewRepresentable.swift in Sources */,
 				C9EBAD1728A1540F007C70C2 /* ViewController.swift in Sources */,
 				89DDB62128A3013300934303 /* MealModel+ConvertData.swift in Sources */,
 				0B7D6A2D28A32BDD008515D5 /* FirstTimeUseView.swift in Sources */,
@@ -356,9 +373,11 @@
 				C9EBAD3C28A15EC0007C70C2 /* DataManger.swift in Sources */,
 				D913014A28A55A8900AB4B88 /* SearchByLetterViewController.swift in Sources */,
 				D913014428A2BC0D00AB4B88 /* UIColor+newColors.swift in Sources */,
+				D04D484F28A4547800415033 /* TabViewController.swift in Sources */,
 				C9EBAD5028A161C5007C70C2 /* FavoritesVC+DataSource.swift in Sources */,
 				C9EBAD2928A15A07007C70C2 /* MealDetailsVM.swift in Sources */,
 				C9EBAD3928A15E9D007C70C2 /* NetWorkManager.swift in Sources */,
+				C9947B5928A55CAC00BC19D4 /* Meal+Decodable.swift in Sources */,
 				C9EBAD4728A16137007C70C2 /* Models.swift in Sources */,
 				C9EBAD3128A15DFC007C70C2 /* FavoritesVM.swift in Sources */,
 				C9EBAD3428A15E2A007C70C2 /* SearchVM.swift in Sources */,

@@ -60,6 +60,17 @@ extension ViewController: UITableViewDataSource {
 
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let destination = viewModel.getDestination(index: indexPath.row)
+        let host = UIHostingController(rootView: destination)
+        navigationController?.pushViewController(host, animated: true)
+    }
+//    @IBAction func onClickFeelingLucky(_ sender: Any) {
+//        let host = UIHostingController(rootView: MealDetailsView(vm: viewModel.getRandomMeal()))
+//        navigationController?.pushViewController(host, animated: true)
+//    }
+    
+    
 }
 
 
