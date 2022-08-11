@@ -6,14 +6,11 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ViewController: UIViewController {
 
-    var mealList: Meals? {
-        didSet {
-            print(mealList?.meals[0].name, mealList?.meals[0].ingredients)
-        }
-    }
+    var mealList: Meals?
     let urlString = "https://www.themealdb.com/api/json/v1/1/random.php"
     override func viewDidLoad() {
                 
@@ -29,6 +26,10 @@ class ViewController: UIViewController {
                 self.mealList = meals
             
             }
+    }
+    @IBAction func onClickFeelingLucky(_ sender: Any) {
+        let host = UIHostingController(rootView: MealDetailsView())
+        navigationController?.pushViewController(host, animated: true)
     }
 }
 
