@@ -9,7 +9,7 @@ import Foundation
 
 
 class MealDetailsVM{
-    let meal: MealModel? = nil
+    let meal: Meal? = nil
     
     
     var listheight: Int {

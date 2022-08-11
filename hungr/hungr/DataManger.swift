@@ -19,20 +19,20 @@ final class DataManager{
         self.context = delegate?.persistentContainer.viewContext
     }
     
-    func getMeals(type: MealType, completion: ([MealModel]) -> Void) {
+    func getMeals(type: MealType, completion: ([Meal]) -> Void) {
         let request = NSFetchRequest<MealEntity>(entityName: "MealEntity")
         request.predicate = NSPredicate(format: "type == %@", type.rawValue)
         do {
-            let meals = try context?.fetch(request)
-            guard let meals = meals else { return }
+            let loadedMeals = try context?.fetch(request)
+            guard let loadedMeals = loadedMeals else { return }
             
-            var mealModels = [MealModel]()
+            var meals = [Meal]()
             
-            for meal in meals {
-                mealModels.append(MealModel(mealEntity: meal))
+            for loadedMeal in loadedMeals {
+                meals.append(Meal(mealEntity: loadedMeal))
             }
             
-            completion(mealModels)
+            completion(meals)
         } catch {
             print("Data Load Error: \(error)")
         }
@@ -40,7 +40,7 @@ final class DataManager{
     
     func getMeal(id: String) -> MealEntity? {
         let request = NSFetchRequest<MealEntity>(entityName: "MealEntity")
-        request.predicate = NSPredicate(format: "idMeal == %@", id)
+        request.predicate = NSPredicate(format: "id == %@", id)
         
         do {
             let loadedMeal = try context?.fetch(request).first
@@ -52,7 +52,7 @@ final class DataManager{
         return nil
     }
     
-    func saveMeal(type: MealType, meal: MealModel) {
+    func saveMeal(type: MealType, meal: Meal) {
         guard let context = context else {
             return
         }
@@ -61,50 +61,13 @@ final class DataManager{
         let mealToSave = NSManagedObject(entity: meals, insertInto: context)
         
         mealToSave.setValue(type.rawValue, forKey: "type")
-        mealToSave.setValue(type == .favorite ? meal.idMeal : UUID().uuidString, forKey: "idMeal")
-        mealToSave.setValue(meal.strMeal, forKey: "strMeal")
-        mealToSave.setValue(meal.strInstructions, forKey: "strInstructions")
-        mealToSave.setValue(meal.strMealThumb, forKey: "strMealThumb")
-        mealToSave.setValue(meal.strIngredient1, forKey: "strIngredient1")
-        mealToSave.setValue(meal.strIngredient2, forKey: "strIngredient2")
-        mealToSave.setValue(meal.strIngredient3, forKey: "strIngredient3")
-        mealToSave.setValue(meal.strIngredient4, forKey: "strIngredient4")
-        mealToSave.setValue(meal.strIngredient5, forKey: "strIngredient5")
-        mealToSave.setValue(meal.strIngredient6, forKey: "strIngredient6")
-        mealToSave.setValue(meal.strIngredient7, forKey: "strIngredient7")
-        mealToSave.setValue(meal.strIngredient8, forKey: "strIngredient8")
-        mealToSave.setValue(meal.strIngredient9, forKey: "strIngredient9")
-        mealToSave.setValue(meal.strIngredient10, forKey: "strIngredient10")
-        mealToSave.setValue(meal.strIngredient11, forKey: "strIngredient11")
-        mealToSave.setValue(meal.strIngredient12, forKey: "strIngredient12")
-        mealToSave.setValue(meal.strIngredient13, forKey: "strIngredient13")
-        mealToSave.setValue(meal.strIngredient14, forKey: "strIngredient14")
-        mealToSave.setValue(meal.strIngredient15, forKey: "strIngredient15")
-        mealToSave.setValue(meal.strIngredient16, forKey: "strIngredient16")
-        mealToSave.setValue(meal.strIngredient17, forKey: "strIngredient17")
-        mealToSave.setValue(meal.strIngredient18, forKey: "strIngredient18")
-        mealToSave.setValue(meal.strIngredient19, forKey: "strIngredient19")
-        mealToSave.setValue(meal.strIngredient20, forKey: "strIngredient20")
-        mealToSave.setValue(meal.strMeasure1, forKey: "strMeasure1")
-        mealToSave.setValue(meal.strMeasure2, forKey: "strMeasure2")
-        mealToSave.setValue(meal.strMeasure3, forKey: "strMeasure3")
-        mealToSave.setValue(meal.strMeasure4, forKey: "strMeasure4")
-        mealToSave.setValue(meal.strMeasure5, forKey: "strMeasure5")
-        mealToSave.setValue(meal.strMeasure6, forKey: "strMeasure6")
-        mealToSave.setValue(meal.strMeasure7, forKey: "strMeasure7")
-        mealToSave.setValue(meal.strMeasure8, forKey: "strMeasure8")
-        mealToSave.setValue(meal.strMeasure9, forKey: "strMeasure9")
-        mealToSave.setValue(meal.strMeasure10, forKey: "strMeasure10")
-        mealToSave.setValue(meal.strMeasure11, forKey: "strMeasure11")
-        mealToSave.setValue(meal.strMeasure12, forKey: "strMeasure12")
-        mealToSave.setValue(meal.strMeasure13, forKey: "strMeasure13")
-        mealToSave.setValue(meal.strMeasure14, forKey: "strMeasure14")
-        mealToSave.setValue(meal.strMeasure15, forKey: "strMeasure15")
-        mealToSave.setValue(meal.strMeasure16, forKey: "strMeasure16")
-        mealToSave.setValue(meal.strMeasure17, forKey: "strMeasure17")
-        mealToSave.setValue(meal.strMeasure18, forKey: "strMeasure18")
-        mealToSave.setValue(meal.strMeasure19, forKey: "strMeasure19")
-        mealToSave.setValue(meal.strMeasure20, forKey: "strMeasure20")
+        mealToSave.setValue(type == .favorite ? meal.id : UUID().uuidString, forKey: "id")
+        mealToSave.setValue(meal.name, forKey: "name")
+        mealToSave.setValue(meal.instructions, forKey: "instructions")
+        mealToSave.setValue(meal.imageURL, forKey: "imageURL")
+        
+        let ingredientsAsString = meal.ingredients.map { "\($0.name)#\($0.amount)"}
+        mealToSave.setValue(ingredientsAsString, forKey: "ingredients")
 
         do {
             try context.save()

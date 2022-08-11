@@ -8,16 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     override func viewDidLoad() {
-                
         super.viewDidLoad()
-        
-        DataManager.shared.getFavMeals { loadedMeals in
-            for meal in loadedMeals {
-                print(meal)
-            }
-        }
     }
 }
 
