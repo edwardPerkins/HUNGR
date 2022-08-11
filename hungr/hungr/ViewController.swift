@@ -8,8 +8,7 @@
 import UIKit
 import SwiftUI
 
-class ViewController: UIViewController {
-    
+class ViewController: UIViewController {    
     @IBOutlet weak var mainTableView: UITableView!
     
     var mealList: Meals? {
@@ -17,6 +16,7 @@ class ViewController: UIViewController {
             print(mealList?.meals[0].name, mealList?.meals[0].ingredients)
         }
     }
+
     let urlString = "https://www.themealdb.com/api/json/v1/1/random.php"
 
     override func viewDidLoad() {
@@ -68,7 +68,10 @@ extension ViewController: UITableViewDataSource {
         let host = UIHostingController(rootView: destination)
         navigationController?.pushViewController(host, animated: true)
     }
-    
+    @IBAction func onClickFeelingLucky(_ sender: Any) {
+        let host = UIHostingController(rootView: MealDetailsView())
+        navigationController?.pushViewController(host, animated: true)
+    }
 }
 
 

@@ -50,6 +50,9 @@
                                 <color key="tintColor" name="AccentTwo"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="I'm Feeling Lucky"/>
+                                <connections>
+                                    <action selector="onClickFeelingLucky:" destination="yjk-0l-8Po" eventType="touchUpInside" id="Osf-Kb-FU7"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UnC-CR-PzE">
                                 <rect key="frame" x="0.0" y="260" width="414" height="523"/>

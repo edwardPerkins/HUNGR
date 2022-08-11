@@ -8,6 +8,12 @@
 import Foundation
 
 class SearchVM{
-    var mealModel: [Meal]? = nil
+    var mealList: Meals!
+    
+    
+    
+    func getRandomMeal() -> MealDetailsVM? {
+        MealDetailsVM(mealList.meals.randomElement())
+    }
     
 }
