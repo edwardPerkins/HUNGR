@@ -65,7 +65,7 @@ struct Meal {
         case strMeasure20
     }
 
-    struct Ingredient {
+    struct Ingredient: Hashable {
         let name: String
         let amount: String
     }

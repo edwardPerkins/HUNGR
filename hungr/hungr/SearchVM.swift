@@ -9,27 +9,15 @@ import Foundation
 
 class SearchVM {
 
-    var mealList: Meals? {
-        didSet{
-            print("view model fired")
-            update()
-            
-        }
-    }
+    var mealList: [MealDetailsVM]!
     
     var update: () -> Void = {}
- 
-
     
     
-    
-    func getRandomMeal() -> MealDetailsVM? {
-        MealDetailsVM(mealList?.meals?.randomElement())
+    func getDestinationVM(at index: Int) -> MealDetailsVM {
+        mealList[index]
     }
-    func getDestination(index: Int) -> MealDetailsView {
-        let vm = MealDetailsVM(mealList?.meals?[index])
-        return MealDetailsView(vm: vm)
-    }
+    
     func getMealsByLetter(letter: String, completion: @escaping () -> Void) {
 
         
@@ -39,7 +27,7 @@ class SearchVM {
 
             guard let data = data else { return }
 
-            self.mealList?.meals = data.meals
+            self.mealList = data.meals?.map { MealDetailsVM($0) }
             completion()
         }
     }

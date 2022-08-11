@@ -19,19 +19,19 @@ struct MealDetailsView: View {
                 .padding(.horizontal, 10)
                 .font(.body)
             }
-            ingrediantList
+            ingredientList
         }
         .foregroundColor(Color.textColor2)
         .background { Color.background.ignoresSafeArea() }
     }
     
-    var ingrediantList: some View {
+    var ingredientList: some View {
         List {
-            ForEach(vm.ingrediants, id: \.self) { ingrediant in
+            ForEach(vm.ingredients, id: \.self) { ingredient in
                 HStack {
-                    Text(ingrediant.amount)
+                    Text(ingredient.amount)
                     Spacer()
-                    Text(ingrediant.name)
+                    Text(ingredient.name)
                         .foregroundColor(.accent2)
                 }
             }
