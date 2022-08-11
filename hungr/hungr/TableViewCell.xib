@@ -51,6 +51,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="favoriteOutlet" destination="H2p-sc-9uM" id="OXf-yH-WLX"/>
+                <outlet property="recipeImageLabel" destination="H2p-sc-9uM" id="SAC-Mx-wzS"/>
+                <outlet property="recipeTitleLabel" destination="H2p-sc-9uM" id="ZqX-bl-wC3"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="81.696428571428569"/>
         </tableViewCell>
     </objects>

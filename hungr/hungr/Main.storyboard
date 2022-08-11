@@ -89,6 +89,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="0bH-RV-28I"/>
                     <navigationItem key="navigationItem" id="jbK-Dh-Rsn"/>
+                    <connections>
+                        <outlet property="mainTableView" destination="UnC-CR-PzE" id="nd2-0i-ORb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="und-RF-7Uh" sceneMemberID="firstResponder"/>
             </objects>
@@ -129,6 +132,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="rRB-vf-SE8"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xJh-ZA-E9l">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
