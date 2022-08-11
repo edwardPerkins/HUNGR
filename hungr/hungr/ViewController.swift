@@ -8,9 +8,10 @@
 import UIKit
 import SwiftUI
 
+
 class ViewController: UIViewController {    
     @IBOutlet weak var mainTableView: UITableView!
-    
+    let viewModel = SearchVM()
     var mealList: Meals? {
         didSet {
             print(mealList?.meals[0].name, mealList?.meals[0].ingredients)
@@ -19,9 +20,19 @@ class ViewController: UIViewController {
 
     let urlString = "https://www.themealdb.com/api/json/v1/1/random.php"
 
+    @IBAction func letterButton(_ sender: UIButton) {
+        
+        guard let label = sender.titleLabel?.text?.lowercased() else { return }
+//        viewModel.getMealsByLetter(letter: label) {
+//            print("RECIPE COUNT", self.viewModel.mealModel?.count)
+//        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        DataManager.shared.getMeals(type: .favorite) { loadedMeals in
+            for meal in loadedMeals {
+                print(meal)
 //        DataManager.shared.getFavMeals { loadedMeals in
 //            for meal in loadedMeals {
 //                print(meal)
@@ -31,6 +42,7 @@ class ViewController: UIViewController {
             NetWorkManager.shared.fetchData(url: urlString) { meals in
                 self.mealList = meals
             
+
             }
 
         }
@@ -46,7 +58,7 @@ class ViewController: UIViewController {
     }
     
 }
-
+}
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -72,6 +84,8 @@ extension ViewController: UITableViewDataSource {
         let host = UIHostingController(rootView: MealDetailsView())
         navigationController?.pushViewController(host, animated: true)
     }
+    
+    
 }
 
 

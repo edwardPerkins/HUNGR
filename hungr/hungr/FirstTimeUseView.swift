@@ -13,7 +13,6 @@ struct FirstTimeUseView: View {
             // background
             Color.background
                 .ignoresSafeArea()
-            
             // content
             ScrollView {
                 welcomeSection
