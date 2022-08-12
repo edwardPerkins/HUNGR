@@ -15,7 +15,7 @@ class SearchByLetterViewController: UIViewController {
     @IBAction func letterButton(_ sender: UIButton) {
         
         guard let letter = sender.titleLabel?.text?.lowercased() else { return }
-        let query = Query.search("f", letter)
+        let query = Query.firstLetter(letter)
 
         guard let viewModel = viewModel else { return }
         viewModel.getMeals(query) {

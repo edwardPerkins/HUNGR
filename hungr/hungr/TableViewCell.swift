@@ -24,7 +24,7 @@ class TableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(_ vm: MealDetailsVM, group: DispatchGroup) {
+    func configure(_ vm: MealDetailsVM) {
         recipeTitleLabel.text = vm.name
         recipeImageLabel.image = UIImage(data: vm.imageData)
     }

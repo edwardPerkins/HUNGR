@@ -9,15 +9,19 @@ import Foundation
 
 /// Use enum raw values to store any string value used in the app to avoid errors and stream line updating
 enum Query {
-    case search(String, String)
+    case search(String)
+    case firstLetter(String)
     case random
     
     var url: String {
+        let baseUrl = "https://www.themealdb.com/api/json/v1/1/"
         switch self {
-        case .search(let parameter, let term):
-            return "https://www.themealdb.com/api/json/v1/1/search.php?" + parameter + "=" + term
+        case .search(let term):
+            return  baseUrl + "search.php?s=" + term
+        case .firstLetter(let letter):
+            return  baseUrl + "search.php?f=" + letter
         case .random:
-            return "https://www.themealdb.com/api/json/v1/1/random.php"
+            return baseUrl + "random.php"
         }
     }
 }

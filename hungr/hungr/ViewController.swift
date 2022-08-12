@@ -12,7 +12,6 @@ import SwiftUI
 class ViewController: UIViewController {    
     @IBOutlet weak var mainTableView: UITableView!
     @IBOutlet weak var searchField: UITextField!
-
     
     let viewModel = SearchVM()
     
@@ -23,16 +22,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configureTable()
- 
     }
     
     override func viewWillAppear(_ animated: Bool) {
         mainTableView.reloadData()
     }
     
-    func configureTable() {
+    private func configureTable() {
         mainTableView.dataSource = self
         mainTableView.delegate = self
         let nib = UINib(nibName: "TableViewCell", bundle: nil)
@@ -40,25 +37,21 @@ class ViewController: UIViewController {
     }
 
     
-    @IBAction func onQuery(_ sender: UIButton) {
-        var query = Query.random
-        
-        if sender.tag == 0 {
-            guard let term = searchField?.text else { return }
-            query = Query.search("s", term)
+    @IBAction func onClickFeelingLucky(_ sender: Any) {
+        viewModel.getMeals(Query.random) {
+            guard let destinationVM = self.viewModel.getDestinationVM(at: 0) else { return }
+            DispatchQueue.main.async {
+                let host = UIHostingController(rootView: MealDetailsView(vm: destinationVM))
+                self.navigationController?.pushViewController(host, animated: true)
+            }
         }
-        viewModel.getMeals(query) {
-            switch query {
-            case .search:
-                DispatchQueue.main.async {
-                    self.mainTableView.reloadData()
-                }
-            case .random:
-                guard let destinationVM = self.viewModel.getDestinationVM(at: 0) else { return }
-                DispatchQueue.main.async {
-                    let host = UIHostingController(rootView: MealDetailsView(vm: destinationVM))
-                    self.navigationController?.pushViewController(host, animated: true)
-                }
+    }
+    
+    @IBAction func onClickSearch(_ sender: UIButton) {
+        guard let term = searchField?.text else { return }
+        viewModel.getMeals(Query.search(term)) {
+            DispatchQueue.main.async {
+                self.mainTableView.reloadData()
             }
         }
     }

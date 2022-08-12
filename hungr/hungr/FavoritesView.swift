@@ -9,8 +9,7 @@ import SwiftUI
 
 struct FavoritesView: View {
 //    let favVM = FavoritesVM()
-    let favoriteMeals: [String] = []
-    
+    @State var favoriteMeals: [(String, Bool)] = [("test", true), ("fav", true), ("meals", true)]
     
     var body: some View {
         ZStack {
@@ -18,30 +17,26 @@ struct FavoritesView: View {
             VStack {
                 Text("Favorites").font(.largeTitle)
                     .foregroundColor(.textColor)
-                List {
-                    ForEach(favoriteMeals, id: \.self) { favMeal in
-                        VStack {
-                            Text(favMeal)
-                                .foregroundColor(.textColor)
-                                .font(.title2)
-                            HStack {
-                                Image(systemName: "logo.playstation")
-                                Image(systemName: "star.fill")
-                                    .foregroundColor(.accent2)
-                                    
+                ForEach(favoriteMeals.indices, id: \.self) { index in
+                    VStack {
+                        Text(favoriteMeals[index].0)
+                            .foregroundColor(.textColor)
+                            .font(.title2)
+                        HStack {
+                            Image(systemName: "logo.playstation")
+                            Button(action: { favoriteMeals[index].1.toggle() }) {
+                                if favoriteMeals[index].1 {
+                                    Image(systemName: "star.fill")
+                                } else {
+                                    Image(systemName: "star")
+                                }
                             }
-                            .font(.system(size: 125))
                         }
+                        .foregroundColor(.accent2)
+                        .font(.system(size: 125))
                     }
-                    .listRowBackground(Color.accent1)
                 }
-                .listStyle(.plain)
-                .safeAreaInset(edge: .bottom) {
-                    Rectangle()
-                        .ignoresSafeArea()
-                        .frame(height: 1)
-                        .foregroundColor(Color.background2)
-                }
+                .plainList()
             }
         }
     }

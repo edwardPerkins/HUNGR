@@ -11,7 +11,7 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as? TableViewCell {
             guard let cellVM = viewModel.getDestinationVM(at: indexPath.row) else { return TableViewCell() }
-            cell.configure(cellVM, group: viewModel.group)
+            cell.configure(cellVM)
             return cell
         }
         return UITableViewCell()
