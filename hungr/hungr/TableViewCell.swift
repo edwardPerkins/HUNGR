@@ -10,7 +10,7 @@ import UIKit
 class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var recipeTitleLabel: UILabel!
-    @IBOutlet weak var recipeImageLabel: UIImage!
+    @IBOutlet weak var recipeImageLabel: UIImageView!
     @IBOutlet weak var favoriteOutlet: UIButton!
     
     override func awakeFromNib() {
@@ -22,6 +22,11 @@ class TableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func configure(_ vm: MealDetailsVM) {
+        recipeTitleLabel.text = vm.name
+        recipeImageLabel.image = UIImage(data: vm.imageData)
     }
     
 }

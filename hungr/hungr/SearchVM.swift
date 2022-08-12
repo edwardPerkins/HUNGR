@@ -11,26 +11,23 @@ class SearchVM {
 
     private var mealList: [MealDetailsVM]?
     
-    var update: () -> Void = {}
+    var group = DispatchGroup()
     
-    var mealCount: Int { mealList?.count ?? 0}
-    
+    var mealCount: Int { mealList?.count ?? 0 }
     
     func getDestinationVM(at index: Int) -> MealDetailsVM? {
         mealList?[index]
     }
-    
-    func getMealsByLetter(letter: String, completion: @escaping () -> Void) {
 
-        
-        let url = "https://www.themealdb.com/api/json/v1/1/search.php?f=\(letter)"
-        
-        NetWorkManager.shared.fetchData(url: url) { (data: Meals?) in
-
-            guard let data = data else { return }
-
-            self.mealList = data.meals?.map { MealDetailsVM($0) }
-            completion()
+    func getMeals(_ query: Query, completion: @escaping () -> Void) {
+        NetWorkManager.shared.fetchData(url: query.url) { (data: Meals?) in
+            self.mealList = data?.meals?.map { MealDetailsVM($0, group: self.group) }
+            self.mealList?.forEach { _ in
+                self.group.enter()
+            }
+            self.group.notify(queue: DispatchQueue.main) {
+                completion()
+            }
         }
     }
     

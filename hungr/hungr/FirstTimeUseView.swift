@@ -39,10 +39,10 @@ extension FirstTimeUseView {
     var welcomeSection: some View {
         Text("WELCOME!!!!!!")
             .font(.system(size: 45.0))
-            .foregroundColor(.accentOne)
+            .foregroundColor(.accent1)
             .padding(.vertical, 10)
             .padding(.horizontal, 25)
-            .background(Color.accentTwo)
+            .background(Color.accent2)
     }
     
     var thankYouSection: some View {
@@ -57,7 +57,7 @@ extension FirstTimeUseView {
         Image(systemName: "fork.knife.circle.fill")
             .resizable()
             .frame(width: 275, height: 275)
-            .foregroundColor(.accentTwo)
+            .foregroundColor(.accent2)
             .padding(.bottom, 55)
     }
     
@@ -65,21 +65,14 @@ extension FirstTimeUseView {
         NavigationLink(destination: TabViewRepresentable().navigationBarHidden(true).ignoresSafeArea()) {
             Text("Continue")
                 .font(.system(size: 40.0))
-                .foregroundColor(.accentOne)
+                .foregroundColor(.accent1)
         }
         .frame(width: UIScreen.main.bounds.width - 40, alignment: .center)
         .padding(.vertical, 7)
-        .background(Color.accentTwo)
+        .background(Color.accent2)
         .cornerRadius(8)
     }
     
-}
-
-extension Color {
-    static let background = Color(uiColor: .Background ?? .clear)
-    static let textColor = Color(uiColor: .TextColor ?? .clear)
-    static let accentOne = Color(uiColor: .AccentOne ?? .clear)
-    static let accentTwo = Color(uiColor: .AccentTwo ?? .clear)
 }
 
 struct FirstTimeUseView_Previews: PreviewProvider {

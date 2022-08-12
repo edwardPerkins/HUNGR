@@ -18,8 +18,14 @@ extension UIColor {
 }
 
 extension Color {
-    static let background2 = Color(uiColor: .Background ?? .clear)
-    static let textColor2 = Color(uiColor: .TextColor ?? .clear)
+    static let background = Color(uiColor: .Background ?? .clear)
+    static let textColor = Color(uiColor: .TextColor ?? .clear)
     static let accent1 = Color(uiColor: .AccentOne ?? .clear)
     static let accent2 = Color(uiColor: .AccentTwo ?? .clear)
+}
+
+extension Image {
+    init(data: Data) {
+        self.init(uiImage: UIImage(data: data) ?? UIImage())
+    }
 }

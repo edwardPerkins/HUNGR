@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--View Controller-->
         <scene sceneID="Qfg-By-71X">
             <objects>
                 <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yjk-0l-8Po" customClass="ViewController" customModule="hungr" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,6 +38,9 @@
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system" title="Search"/>
+                                <connections>
+                                    <action selector="onClickSearch:" destination="yjk-0l-8Po" eventType="touchUpInside" id="TDr-GH-r99"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtO-UV-Z40">
                                 <rect key="frame" x="35" y="205" width="131" height="31"/>
@@ -48,11 +51,14 @@
                                     <segue destination="GcX-Mv-yhb" kind="show" id="5Gm-ZE-KG7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJt-rj-hNK">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJt-rj-hNK">
                                 <rect key="frame" x="242" y="205" width="137" height="31"/>
                                 <color key="tintColor" name="AccentTwo"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="I'm Feeling Lucky"/>
+                                <connections>
+                                    <action selector="onClickFeelingLucky:" destination="yjk-0l-8Po" eventType="touchUpInside" id="wqB-XZ-Cak"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UnC-CR-PzE">
                                 <rect key="frame" x="0.0" y="266" width="414" height="527"/>
@@ -89,15 +95,18 @@
                             <constraint firstAttribute="trailing" secondItem="UnC-CR-PzE" secondAttribute="trailing" id="uTf-eZ-3BW"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="0bH-RV-28I"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="0bH-RV-28I">
+                        <color key="badgeColor" name="accentTwo"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="jbK-Dh-Rsn"/>
                     <connections>
                         <outlet property="mainTableView" destination="UnC-CR-PzE" id="dOy-OF-R0L"/>
+                        <outlet property="searchField" destination="JA4-Cd-m6h" id="SJm-35-HqZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="und-RF-7Uh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3633.3333333333335" y="57.589285714285708"/>
+            <point key="canvasLocation" x="3632" y="485"/>
         </scene>
         <!--SearchByLetter-->
         <scene sceneID="JOc-O1-gaW">
@@ -107,7 +116,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t2r-kG-hCb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4232.608695652174" y="89.732142857142847"/>
+            <point key="canvasLocation" x="4223" y="485"/>
         </scene>
         <!--Tab View Controller-->
         <scene sceneID="U12-vQ-JrQ">
@@ -122,11 +131,24 @@
                     </tabBar>
                     <connections>
                         <segue destination="yjk-0l-8Po" kind="relationship" relationship="viewControllers" id="gE8-ky-rbz"/>
+                        <segue destination="YES-Ls-y2k" kind="relationship" relationship="viewControllers" id="hZB-me-nYl"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KiW-sz-grh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2723.1884057971015" y="57.589285714285708"/>
+        </scene>
+        <!--Favorites Host-->
+        <scene sceneID="AhS-xi-FBh">
+            <objects>
+                <hostingController storyboardIdentifier="FavoriteHost" id="YES-Ls-y2k" customClass="FavoritesHost" customModule="hungr" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="Qoh-a7-iea">
+                        <color key="badgeColor" name="accentTwo"/>
+                    </tabBarItem>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="URx-rf-AXv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3633" y="-224"/>
         </scene>
     </scenes>
     <resources>
@@ -136,6 +158,9 @@
         </namedColor>
         <namedColor name="accentOne">
             <color red="0.16470588235294117" green="0.61568627450980395" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="accentTwo">
+            <color red="0.9137254901960784" green="0.7686274509803922" blue="0.41568627450980394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="background">
             <color red="0.90588235294117647" green="0.43529411764705883" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

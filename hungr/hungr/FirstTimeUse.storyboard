@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
     </dependencies>
     <scenes>
-        <!--First Time UseVC-->
+        <!--First Time Use Host-->
         <scene sceneID="HGt-dj-ziM">
             <objects>
-                <hostingController id="vOu-fP-AJ5" customClass="FirstTimeUseVC" customModule="hungr" customModuleProvider="target" sceneMemberID="viewController"/>
+                <hostingController id="vOu-fP-AJ5" customClass="FirstTimeUseHost" customModule="hungr" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t5b-ET-SYm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-55" y="-100"/>

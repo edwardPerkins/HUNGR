@@ -13,20 +13,12 @@ struct MealDetailsView: View {
     var body: some View {
         VStack {
             Text(vm.name).font(.largeTitle)
-            Rectangle().frame(width: 150, height: 150)
+            Image(data: vm.imageData).resizable().frame(width: 150, height: 150)
             ScrollView {
-            Text(vm.instructions)
-                .padding(.horizontal, 10)
-                .font(.body)
+                Text(vm.instructions)
+                    .padding(.horizontal, 10)
+                    .font(.body)
             }
-            ingredientList
-        }
-        .foregroundColor(Color.textColor2)
-        .background { Color.background.ignoresSafeArea() }
-    }
-    
-    var ingredientList: some View {
-        List {
             ForEach(vm.ingredients, id: \.self) { ingredient in
                 HStack {
                     Text(ingredient.amount)
@@ -35,22 +27,17 @@ struct MealDetailsView: View {
                         .foregroundColor(.accent2)
                 }
             }
-            .listRowBackground(Color.accent1)
+            .plainList()
         }
-        .listStyle(.plain)
-        .frame(height: CGFloat(vm.listheight))
-        .safeAreaInset(edge: .bottom) {
-            Rectangle()
-                .ignoresSafeArea()
-                .frame(height: 1)
-                .foregroundColor(Color.background2)
-        }
+        .foregroundColor(Color.textColor)
+        .background { Color.background.ignoresSafeArea() }
     }
 }
 
 
-struct MealDetailsView_Previews: PreviewProvider {
-    static var previews: some View {
-        MealDetailsView(vm: .init(.init(id: "af", name: "af", instructions: "af", imageURL: "af", ingredients: [.init(name: "as", amount: "asf")])))
-    }
-}
+//
+//struct MealDetailsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MealDetailsView(vm: .init(.init(id: "af", name: "af", instructions: "af", imageURL: "af", ingredients: [.init(name: "as", amount: "asf")])))
+//    }
+//}
