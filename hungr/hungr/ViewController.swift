@@ -11,6 +11,8 @@ import SwiftUI
 
 class ViewController: UIViewController {    
     @IBOutlet weak var mainTableView: UITableView!
+    @IBOutlet weak var searchField: UITextField!
+
     
     let viewModel = SearchVM()
     
@@ -36,11 +38,30 @@ class ViewController: UIViewController {
         let nib = UINib(nibName: "TableViewCell", bundle: nil)
         mainTableView.register(nib, forCellReuseIdentifier: "Cell")
     }
+
     
-//    @IBAction func onClickFeelingLucky(_ sender: Any) {
-//        let host = UIHostingController(rootView: MealDetailsView(vm: <#MealDetailsVM#>))
-//        navigationController?.pushViewController(host, animated: true)
-//    }
+    @IBAction func onQuery(_ sender: UIButton) {
+        var query = Query.random
+        
+        if sender.tag == 0 {
+            guard let term = searchField?.text else { return }
+            query = Query.search("s", term)
+        }
+        viewModel.getMeals(query) {
+            switch query {
+            case .search:
+                DispatchQueue.main.async {
+                    self.mainTableView.reloadData()
+                }
+            case .random:
+                guard let destinationVM = self.viewModel.getDestinationVM(at: 0) else { return }
+                DispatchQueue.main.async {
+                    let host = UIHostingController(rootView: MealDetailsView(vm: destinationVM))
+                    self.navigationController?.pushViewController(host, animated: true)
+                }
+            }
+        }
+    }
 }
 
 

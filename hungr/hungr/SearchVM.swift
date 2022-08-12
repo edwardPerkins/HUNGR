@@ -19,16 +19,20 @@ class SearchVM {
         mealList?[index]
     }
     
-    
-    
-    func getMealsByLetter(_ letterToSearch: String, completion: @escaping () -> Void) {
-        let url = "https://www.themealdb.com/api/json/v1/1/search.php?f=\(letterToSearch)"
-        
-        NetWorkManager.shared.fetchData(url: url) { (data: Meals?) in
+//    func getRandomMeal(completion: @escaping (MealDetailsVM) -> Void) {
+//        NetWorkManager.shared.fetchData(url: Query.random.url) { (data: Meals?) in
+//            guard let meal = data?.meals?[0] else { return }
+//            self.group.enter()
+//            let vm = MealDetailsVM(meal, group: self.group)
+//            self.group.notify(queue: <#T##DispatchQueue#>, work: <#T##DispatchWorkItem#>)
+//            completion()
+//        }
+//    }
 
-            guard let data = data else { return }
-            
-            self.mealList = data.meals?.map { MealDetailsVM($0, group: self.group) }
+    
+    func getMeals(_ query: Query, completion: @escaping () -> Void) {
+        NetWorkManager.shared.fetchData(url: query.url) { (data: Meals?) in
+            self.mealList = data?.meals?.map { MealDetailsVM($0, group: self.group) }
             self.mealList?.forEach { _ in
                 self.group.enter()
             }

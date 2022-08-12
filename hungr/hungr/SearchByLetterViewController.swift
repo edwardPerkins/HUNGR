@@ -15,9 +15,10 @@ class SearchByLetterViewController: UIViewController {
     @IBAction func letterButton(_ sender: UIButton) {
         
         guard let letter = sender.titleLabel?.text?.lowercased() else { return }
+        let query = Query.search("f", letter)
 
         guard let viewModel = viewModel else { return }
-        viewModel.getMealsByLetter(letter) {
+        viewModel.getMeals(query) {
             DispatchQueue.main.async { [weak self] in
                 self?.navigationController?.popViewController(animated: true)
             }

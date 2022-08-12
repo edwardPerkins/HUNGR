@@ -12,7 +12,7 @@ struct Meals: Decodable {
 }
 
 struct Meal {
-    let id: String
+    let id: String?
     let name: String
     let instructions: String
     let imageURL: String
