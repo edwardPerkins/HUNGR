@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0B7D6A2B28A2E38E008515D5 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7D6A2A28A2E38E008515D5 /* TableViewCell.xib */; };
 		0B7D6A2D28A32BDD008515D5 /* FirstTimeUseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7D6A2C28A32BDD008515D5 /* FirstTimeUseView.swift */; };
+		0B9F5ABC28A5BA2200312C4E /* hungrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F5ABB28A5BA2200312C4E /* hungrTests.swift */; };
 		89DDB61F28A2E79B00934303 /* hungr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 89DDB61D28A2E79B00934303 /* hungr.xcdatamodeld */; };
 		89DDB62128A3013300934303 /* MealModel+ConvertData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DDB62028A3013300934303 /* MealModel+ConvertData.swift */; };
 		C7A80FC528A4284800F2EB48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A80FC428A4284800F2EB48 /* Main.storyboard */; };
@@ -42,9 +43,21 @@
 		D913014A28A55A8900AB4B88 /* SearchByLetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D913014928A55A8900AB4B88 /* SearchByLetterViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0B9F5ABD28A5BA2200312C4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9EBAD0728A1540F007C70C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9EBAD0E28A1540F007C70C2;
+			remoteInfo = hungr;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0B7D6A2A28A2E38E008515D5 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		0B7D6A2C28A32BDD008515D5 /* FirstTimeUseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeUseView.swift; sourceTree = "<group>"; };
+		0B9F5AB928A5BA2200312C4E /* hungrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hungrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B9F5ABB28A5BA2200312C4E /* hungrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hungrTests.swift; sourceTree = "<group>"; };
 		89DDB61E28A2E79B00934303 /* hungr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = hungr.xcdatamodel; sourceTree = "<group>"; };
 		89DDB62028A3013300934303 /* MealModel+ConvertData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MealModel+ConvertData.swift"; sourceTree = "<group>"; };
 		C7A80FC428A4284800F2EB48 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -81,6 +94,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0B9F5AB628A5BA2200312C4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C9EBAD0C28A1540F007C70C2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -91,10 +111,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B9F5ABA28A5BA2200312C4E /* hungrTests */ = {
+			isa = PBXGroup;
+			children = (
+				0B9F5ABB28A5BA2200312C4E /* hungrTests.swift */,
+			);
+			path = hungrTests;
+			sourceTree = "<group>";
+		};
 		C9EBAD0628A1540F007C70C2 = {
 			isa = PBXGroup;
 			children = (
 				C9EBAD1128A1540F007C70C2 /* hungr */,
+				0B9F5ABA28A5BA2200312C4E /* hungrTests */,
 				C9EBAD1028A1540F007C70C2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				C9EBAD0F28A1540F007C70C2 /* hungr.app */,
+				0B9F5AB928A5BA2200312C4E /* hungrTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -271,6 +301,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0B9F5AB828A5BA2200312C4E /* hungrTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B9F5AC128A5BA2200312C4E /* Build configuration list for PBXNativeTarget "hungrTests" */;
+			buildPhases = (
+				0B9F5AB528A5BA2200312C4E /* Sources */,
+				0B9F5AB628A5BA2200312C4E /* Frameworks */,
+				0B9F5AB728A5BA2200312C4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0B9F5ABE28A5BA2200312C4E /* PBXTargetDependency */,
+			);
+			name = hungrTests;
+			productName = hungrTests;
+			productReference = 0B9F5AB928A5BA2200312C4E /* hungrTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C9EBAD0E28A1540F007C70C2 /* hungr */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9EBAD2328A15410007C70C2 /* Build configuration list for PBXNativeTarget "hungr" */;
@@ -295,9 +343,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					0B9F5AB828A5BA2200312C4E = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = C9EBAD0E28A1540F007C70C2;
+					};
 					C9EBAD0E28A1540F007C70C2 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -317,11 +369,19 @@
 			projectRoot = "";
 			targets = (
 				C9EBAD0E28A1540F007C70C2 /* hungr */,
+				0B9F5AB828A5BA2200312C4E /* hungrTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0B9F5AB728A5BA2200312C4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C9EBAD0D28A1540F007C70C2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -339,6 +399,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0B9F5AB528A5BA2200312C4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B9F5ABC28A5BA2200312C4E /* hungrTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C9EBAD0B28A1540F007C70C2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -374,6 +442,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		0B9F5ABE28A5BA2200312C4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9EBAD0E28A1540F007C70C2 /* hungr */;
+			targetProxy = 0B9F5ABD28A5BA2200312C4E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		C9EBAD1D28A15410007C70C2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -386,6 +462,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0B9F5ABF28A5BA2200312C4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spencer.hurd.rave.hungrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hungr.app/hungr";
+			};
+			name = Debug;
+		};
+		0B9F5AC028A5BA2200312C4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spencer.hurd.rave.hungrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hungr.app/hungr";
+			};
+			name = Release;
+		};
 		C9EBAD2128A15410007C70C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -559,6 +671,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0B9F5AC128A5BA2200312C4E /* Build configuration list for PBXNativeTarget "hungrTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B9F5ABF28A5BA2200312C4E /* Debug */,
+				0B9F5AC028A5BA2200312C4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C9EBAD0A28A1540F007C70C2 /* Build configuration list for PBXProject "hungr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
