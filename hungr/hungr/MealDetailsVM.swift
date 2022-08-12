@@ -10,7 +10,7 @@ import Foundation
 
 class MealDetailsVM {
     
-    init(_ meal: Meal) {
+    init(_ meal: Meal, group: DispatchGroup) {
         name = meal.name
         instructions = meal.instructions
         ingredients = meal.ingredients
@@ -18,6 +18,7 @@ class MealDetailsVM {
         
         NetWorkManager.shared.fetchImageData(url: meal.imageURL) { data in
             self.imageData = data
+            group.leave()
         }
     }
     
@@ -28,7 +29,7 @@ class MealDetailsVM {
     
     var name: String
     
-    var ingredients: [Meal.Ingredient]
+    var ingredients: [Meal.Ingredient] = []
     
     var instructions: String
     

@@ -22,14 +22,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel.update = {
-            
-            DispatchQueue.main.async { [weak self] in
-                self?.mainTableView.reloadData()
-            }
-        }
-        
         configureTable()
+ 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        mainTableView.reloadData()
     }
     
     func configureTable() {

@@ -10,20 +10,18 @@ import UIKit
 class SearchByLetterViewController: UIViewController {
     
     var viewModel: SearchVM?
-//    var updateDelegate: Updatable?
+
 
     @IBAction func letterButton(_ sender: UIButton) {
         
-        guard let label = sender.titleLabel?.text?.lowercased() else { return }
-//        viewModel.getMealsByLetter(letter: label) {
-//            print("RECIPE COUNT", self.viewModel.mealModel?.count)
-//        }
+        guard let letter = sender.titleLabel?.text?.lowercased() else { return }
+
         guard let viewModel = viewModel else { return }
-        viewModel.getMealsByLetter(letter: label, completion: {
-            
-        })
-//        present(ViewController(), animated: true)
-        navigationController?.popViewController(animated: true)
+        viewModel.getMealsByLetter(letter) {
+            DispatchQueue.main.async { [weak self] in
+                self?.navigationController?.popViewController(animated: true)
+            }
+        }
     }
     
     override func viewDidLoad() {

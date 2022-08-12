@@ -13,7 +13,7 @@ struct MealDetailsView: View {
     var body: some View {
         VStack {
             Text(vm.name).font(.largeTitle)
-            Rectangle().frame(width: 150, height: 150)
+            Image(uiImage: UIImage(data: vm.imageData) ?? UIImage()).resizable().frame(width: 150, height: 150)
             ScrollView {
             Text(vm.instructions)
                 .padding(.horizontal, 10)
@@ -25,7 +25,7 @@ struct MealDetailsView: View {
         .background { Color.background.ignoresSafeArea() }
     }
     
-    var ingredientList: some View {
+    private var ingredientList: some View {
         List {
             ForEach(vm.ingredients, id: \.self) { ingredient in
                 HStack {
@@ -48,9 +48,9 @@ struct MealDetailsView: View {
     }
 }
 
-
-struct MealDetailsView_Previews: PreviewProvider {
-    static var previews: some View {
-        MealDetailsView(vm: .init(.init(id: "af", name: "af", instructions: "af", imageURL: "af", ingredients: [.init(name: "as", amount: "asf")])))
-    }
-}
+//
+//struct MealDetailsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MealDetailsView(vm: .init(.init(id: "af", name: "af", instructions: "af", imageURL: "af", ingredients: [.init(name: "as", amount: "asf")])))
+//    }
+//}
