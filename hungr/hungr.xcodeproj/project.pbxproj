@@ -14,11 +14,14 @@
 		8907B34B28A5648C00A9CAF1 /* MyMeals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8907B34A28A5648C00A9CAF1 /* MyMeals.storyboard */; };
 		8907B34E28A56AC800A9CAF1 /* MyMealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907B34C28A56AC800A9CAF1 /* MyMealCell.swift */; };
 		8907B34F28A56AC800A9CAF1 /* MyMealCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8907B34D28A56AC800A9CAF1 /* MyMealCell.xib */; };
+		8907B35128A5814600A9CAF1 /* MyMealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907B35028A5814600A9CAF1 /* MyMealsViewController.swift */; };
+		8907B35328A5856700A9CAF1 /* MyMealsController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907B35228A5856700A9CAF1 /* MyMealsController+DataSource.swift */; };
+		8907B35528A58C0500A9CAF1 /* MyMealsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907B35428A58C0500A9CAF1 /* MyMealsViewModel.swift */; };
+		8907B35728A598C600A9CAF1 /* CreateMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907B35628A598C600A9CAF1 /* CreateMealViewController.swift */; };
 		89DDB61F28A2E79B00934303 /* hungr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 89DDB61D28A2E79B00934303 /* hungr.xcdatamodeld */; };
 		89DDB62128A3013300934303 /* MealModel+ConvertData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DDB62028A3013300934303 /* MealModel+ConvertData.swift */; };
 		C7A80FC528A4284800F2EB48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A80FC428A4284800F2EB48 /* Main.storyboard */; };
 		C9947B5928A55CAC00BC19D4 /* Meal+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9947B5828A55CAC00BC19D4 /* Meal+Decodable.swift */; };
-
 		C9EBAD1328A1540F007C70C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD1228A1540F007C70C2 /* AppDelegate.swift */; };
 		C9EBAD1528A1540F007C70C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD1428A1540F007C70C2 /* SceneDelegate.swift */; };
 		C9EBAD1728A1540F007C70C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD1628A1540F007C70C2 /* ViewController.swift */; };
@@ -40,10 +43,6 @@
 		C9EBAD5728A167E1007C70C2 /* ViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD5628A167E1007C70C2 /* ViewController+DataSource.swift */; };
 		D046B59428A2DBBA005A548A /* MealDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D046B59328A2DBBA005A548A /* MealDetailsView.swift */; };
 		D046B59628A2EE43005A548A /* MealDetailsHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D046B59528A2EE43005A548A /* MealDetailsHost.swift */; };
-		D04D484928A4274700415033 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D04D484828A4274700415033 /* Main.storyboard */; };
-		D04D484B28A4286800415033 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D484A28A4286800415033 /* Meal.swift */; };
-		D0E26FFC28A34CF2007F310E /* ViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E26FFB28A34CF2007F310E /* ViewControllerWrapper.swift */; };
-
 		D04D484D28A44D9C00415033 /* FirstTimeUse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D04D484C28A44D9C00415033 /* FirstTimeUse.storyboard */; };
 		D04D484F28A4547800415033 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D484E28A4547800415033 /* TabViewController.swift */; };
 		D0E26FFC28A34CF2007F310E /* TabViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E26FFB28A34CF2007F310E /* TabViewRepresentable.swift */; };
@@ -51,6 +50,16 @@
 		D913014828A4250200AB4B88 /* SearchByLetter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D913014728A4250200AB4B88 /* SearchByLetter.storyboard */; };
 		D913014A28A55A8900AB4B88 /* SearchByLetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D913014928A55A8900AB4B88 /* SearchByLetterViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8907B36628A5A9C700A9CAF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9EBAD0728A1540F007C70C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9EBAD0E28A1540F007C70C2;
+			remoteInfo = hungr;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0B7D6A2428A2C7D0008515D5 /* IngredientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTableViewCell.swift; sourceTree = "<group>"; };
@@ -60,6 +69,11 @@
 		8907B34A28A5648C00A9CAF1 /* MyMeals.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyMeals.storyboard; sourceTree = "<group>"; };
 		8907B34C28A56AC800A9CAF1 /* MyMealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMealCell.swift; sourceTree = "<group>"; };
 		8907B34D28A56AC800A9CAF1 /* MyMealCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyMealCell.xib; sourceTree = "<group>"; };
+		8907B35028A5814600A9CAF1 /* MyMealsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMealsViewController.swift; sourceTree = "<group>"; };
+		8907B35228A5856700A9CAF1 /* MyMealsController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyMealsController+DataSource.swift"; sourceTree = "<group>"; };
+		8907B35428A58C0500A9CAF1 /* MyMealsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMealsViewModel.swift; sourceTree = "<group>"; };
+		8907B35628A598C600A9CAF1 /* CreateMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMealViewController.swift; sourceTree = "<group>"; };
+		8907B36028A5A9C700A9CAF1 /* hungrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hungrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89DDB61E28A2E79B00934303 /* hungr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = hungr.xcdatamodel; sourceTree = "<group>"; };
 		89DDB62028A3013300934303 /* MealModel+ConvertData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MealModel+ConvertData.swift"; sourceTree = "<group>"; };
 		C7A80FC428A4284800F2EB48 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -87,21 +101,22 @@
 		C9EBAD5628A167E1007C70C2 /* ViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+DataSource.swift"; sourceTree = "<group>"; };
 		D046B59328A2DBBA005A548A /* MealDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsView.swift; sourceTree = "<group>"; };
 		D046B59528A2EE43005A548A /* MealDetailsHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsHost.swift; sourceTree = "<group>"; };
-
-		D04D484828A4274700415033 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		D04D484A28A4286800415033 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
-		D0E26FFB28A34CF2007F310E /* ViewControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerWrapper.swift; sourceTree = "<group>"; };
-
 		D04D484C28A44D9C00415033 /* FirstTimeUse.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstTimeUse.storyboard; sourceTree = "<group>"; };
 		D04D484E28A4547800415033 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		D0E26FFB28A34CF2007F310E /* TabViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewRepresentable.swift; sourceTree = "<group>"; };
-
 		D913014328A2BC0D00AB4B88 /* UIColor+newColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+newColors.swift"; sourceTree = "<group>"; };
 		D913014728A4250200AB4B88 /* SearchByLetter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchByLetter.storyboard; sourceTree = "<group>"; };
 		D913014928A55A8900AB4B88 /* SearchByLetterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchByLetterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8907B35D28A5A9C700A9CAF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C9EBAD0C28A1540F007C70C2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -116,7 +131,11 @@
 			isa = PBXGroup;
 			children = (
 				8907B34A28A5648C00A9CAF1 /* MyMeals.storyboard */,
+				8907B35628A598C600A9CAF1 /* CreateMealViewController.swift */,
 				8907B34C28A56AC800A9CAF1 /* MyMealCell.swift */,
+				8907B35028A5814600A9CAF1 /* MyMealsViewController.swift */,
+				8907B35228A5856700A9CAF1 /* MyMealsController+DataSource.swift */,
+				8907B35428A58C0500A9CAF1 /* MyMealsViewModel.swift */,
 				8907B34D28A56AC800A9CAF1 /* MyMealCell.xib */,
 			);
 			name = MyMeals;
@@ -134,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				C9EBAD0F28A1540F007C70C2 /* hungr.app */,
+				8907B36028A5A9C700A9CAF1 /* hungrUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -287,9 +307,7 @@
 				D04D484E28A4547800415033 /* TabViewController.swift */,
 				C9EBAD5428A167CC007C70C2 /* ViewController+Delegate.swift */,
 				C9EBAD5628A167E1007C70C2 /* ViewController+DataSource.swift */,
-
 				D913014928A55A8900AB4B88 /* SearchByLetterViewController.swift */,
-
 				D913014728A4250200AB4B88 /* SearchByLetter.storyboard */,
 				C7A80FC428A4284800F2EB48 /* Main.storyboard */,
 			);
@@ -299,6 +317,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8907B35F28A5A9C700A9CAF1 /* hungrUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8907B36828A5A9C700A9CAF1 /* Build configuration list for PBXNativeTarget "hungrUITests" */;
+			buildPhases = (
+				8907B35C28A5A9C700A9CAF1 /* Sources */,
+				8907B35D28A5A9C700A9CAF1 /* Frameworks */,
+				8907B35E28A5A9C700A9CAF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8907B36728A5A9C700A9CAF1 /* PBXTargetDependency */,
+			);
+			name = hungrUITests;
+			productName = hungrUITests;
+			productReference = 8907B36028A5A9C700A9CAF1 /* hungrUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		C9EBAD0E28A1540F007C70C2 /* hungr */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9EBAD2328A15410007C70C2 /* Build configuration list for PBXNativeTarget "hungr" */;
@@ -323,9 +359,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					8907B35F28A5A9C700A9CAF1 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = C9EBAD0E28A1540F007C70C2;
+					};
 					C9EBAD0E28A1540F007C70C2 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -345,11 +385,19 @@
 			projectRoot = "";
 			targets = (
 				C9EBAD0E28A1540F007C70C2 /* hungr */,
+				8907B35F28A5A9C700A9CAF1 /* hungrUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8907B35E28A5A9C700A9CAF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C9EBAD0D28A1540F007C70C2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -359,9 +407,7 @@
 				0B7D6A2B28A2E38E008515D5 /* TableViewCell.xib in Resources */,
 				8907B34F28A56AC800A9CAF1 /* MyMealCell.xib in Resources */,
 				C9EBAD1F28A15410007C70C2 /* LaunchScreen.storyboard in Resources */,
-
 				D04D484D28A44D9C00415033 /* FirstTimeUse.storyboard in Resources */,
-
 				D913014828A4250200AB4B88 /* SearchByLetter.storyboard in Resources */,
 				C7A80FC528A4284800F2EB48 /* Main.storyboard in Resources */,
 				C9EBAD1C28A15410007C70C2 /* Assets.xcassets in Resources */,
@@ -371,6 +417,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8907B35C28A5A9C700A9CAF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C9EBAD0B28A1540F007C70C2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -383,6 +436,7 @@
 				C9EBAD4128A15F43007C70C2 /* StringConstants.swift in Sources */,
 				D0E26FFC28A34CF2007F310E /* TabViewRepresentable.swift in Sources */,
 				C9EBAD1728A1540F007C70C2 /* ViewController.swift in Sources */,
+				8907B35328A5856700A9CAF1 /* MyMealsController+DataSource.swift in Sources */,
 				89DDB62128A3013300934303 /* MealModel+ConvertData.swift in Sources */,
 				0B7D6A2D28A32BDD008515D5 /* FirstTimeUseView.swift in Sources */,
 				C9EBAD1328A1540F007C70C2 /* AppDelegate.swift in Sources */,
@@ -394,6 +448,9 @@
 				D913014A28A55A8900AB4B88 /* SearchByLetterViewController.swift in Sources */,
 				D913014428A2BC0D00AB4B88 /* UIColor+newColors.swift in Sources */,
 				D04D484F28A4547800415033 /* TabViewController.swift in Sources */,
+				8907B35128A5814600A9CAF1 /* MyMealsViewController.swift in Sources */,
+				8907B35728A598C600A9CAF1 /* CreateMealViewController.swift in Sources */,
+				8907B35528A58C0500A9CAF1 /* MyMealsViewModel.swift in Sources */,
 				C9EBAD5028A161C5007C70C2 /* FavoritesVC+DataSource.swift in Sources */,
 				C9EBAD2928A15A07007C70C2 /* MealDetailsVM.swift in Sources */,
 				C9EBAD3928A15E9D007C70C2 /* NetWorkManager.swift in Sources */,
@@ -409,6 +466,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8907B36728A5A9C700A9CAF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9EBAD0E28A1540F007C70C2 /* hungr */;
+			targetProxy = 8907B36628A5A9C700A9CAF1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		C9EBAD1D28A15410007C70C2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -421,6 +486,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8907B36928A5A9C700A9CAF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = personal.hungrUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = hungr;
+			};
+			name = Debug;
+		};
+		8907B36A28A5A9C700A9CAF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = personal.hungrUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = hungr;
+			};
+			name = Release;
+		};
 		C9EBAD2128A15410007C70C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -594,6 +693,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8907B36828A5A9C700A9CAF1 /* Build configuration list for PBXNativeTarget "hungrUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8907B36928A5A9C700A9CAF1 /* Debug */,
+				8907B36A28A5A9C700A9CAF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C9EBAD0A28A1540F007C70C2 /* Build configuration list for PBXProject "hungr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

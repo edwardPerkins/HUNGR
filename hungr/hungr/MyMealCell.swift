@@ -7,11 +7,51 @@
 
 import UIKit
 
-class MyMealCell: UICollectionViewCell {
+protocol MealDeletable {
+    func deleteMeal(id: String)
+}
 
+class MyMealCell: UICollectionViewCell {
+    @IBOutlet weak var mealImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    var cellVM: MealDetailsVM? {
+        didSet {
+            DispatchQueue.main.async {
+                self.nameLabel.text = self.cellVM?.name ?? "??"
+            }
+        }
+    }
+    
+    var deleteDelegate: MealDeletable?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    @IBAction func deleteButtonTapped(_ sender: Any) {
+        guard let id = cellVM?.meal?.id else {
+            return
+        }
+        
+        deleteDelegate?.deleteMeal(id: id)
+    }
+    
+    func configure(vm: MealDetailsVM) {
+        cellVM = vm
+        getImage(url: cellVM?.meal?.imageURL)
+    }
+    
+    func getImage(url: String?) {
+        guard let url = url else {
+            return
+        }
 
+        NetWorkManager.shared.fetchImageData(url: url) { data in
+            DispatchQueue.main.async {
+                self.mealImageView.image = UIImage(data: data)
+            }
+        }
+    }
 }
