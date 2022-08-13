@@ -6,12 +6,18 @@
 //
 
 import Foundation
-import UIKit
+import SwiftUI
 
-class TabViewController: UITabBarController {
+class TabViewController: UITabBarController, UITabBarControllerDelegate {
+    var viewmodel: SearchVM?
+    
     override func viewDidLoad() {
         print("used already was", UserDefaults.standard.bool(forKey: "usedAlready"))
         UserDefaults.standard.set(true, forKey: "usedAlready")
         print("used already set to", UserDefaults.standard.bool(forKey: "usedAlready"))
+        self.delegate = self
+        
     }
+
 }
+

@@ -10,7 +10,6 @@ import SwiftUI
 class FavoritesHost: UIHostingController<FavoritesView> {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder, rootView: FavoritesView())
-        
     }
 }
 

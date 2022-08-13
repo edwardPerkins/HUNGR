@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TabViewRepresentable: UIViewControllerRepresentable {
+    @EnvironmentObject var viewModel: SearchVM
 
     typealias UIViewControllerType = TabViewController
 
@@ -15,7 +16,7 @@ struct TabViewRepresentable: UIViewControllerRepresentable {
     func makeUIViewController(context: UIViewControllerRepresentableContext<TabViewRepresentable>) -> TabViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(identifier: "TabVC") as! TabViewController
-    
+        viewController.viewmodel = viewModel
         return viewController
     }
 

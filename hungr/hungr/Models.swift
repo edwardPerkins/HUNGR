@@ -70,3 +70,10 @@ struct Meal {
         let amount: String
     }
 }
+
+//struct Favorite {
+//    let id: String
+//    let name: String
+//    let imageData: Data
+//    var staysFavorite = true
+//}

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct FirstTimeUseView: View {
+    @ObservedObject var viewModel = SearchVM()
+    
     var firstUse: Bool { !UserDefaults.standard.bool(forKey: "usedAlready") }
     
     var body: some View {
@@ -27,7 +29,7 @@ struct FirstTimeUseView: View {
                     }
                 }
             } else {
-                TabViewRepresentable().navigationBarHidden(true).ignoresSafeArea()
+                tabView
             }
         }
         .accentColor(.accent2)
@@ -35,6 +37,10 @@ struct FirstTimeUseView: View {
 }
 
 extension FirstTimeUseView {
+    
+    var tabView: some View {
+        TabViewRepresentable().environmentObject(viewModel).navigationBarHidden(true).ignoresSafeArea()
+    }
     
     var welcomeSection: some View {
         Text("WELCOME!!!!!!")
@@ -62,7 +68,7 @@ extension FirstTimeUseView {
     }
     
     var continueSection: some View {
-        NavigationLink(destination: TabViewRepresentable().navigationBarHidden(true).ignoresSafeArea()) {
+        NavigationLink(destination:tabView) {
             Text("Continue")
                 .font(.system(size: 40.0))
                 .foregroundColor(.accent1)

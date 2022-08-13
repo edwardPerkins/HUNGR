@@ -18,8 +18,7 @@
 		C9EBAD1728A1540F007C70C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD1628A1540F007C70C2 /* ViewController.swift */; };
 		C9EBAD1C28A15410007C70C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9EBAD1B28A15410007C70C2 /* Assets.xcassets */; };
 		C9EBAD1F28A15410007C70C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9EBAD1D28A15410007C70C2 /* LaunchScreen.storyboard */; };
-		C9EBAD2928A15A07007C70C2 /* MealDetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD2828A15A07007C70C2 /* MealDetailsVM.swift */; };
-		C9EBAD3128A15DFC007C70C2 /* FavoritesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD3028A15DFC007C70C2 /* FavoritesVM.swift */; };
+		C9EBAD2928A15A07007C70C2 /* MealVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD2828A15A07007C70C2 /* MealVM.swift */; };
 		C9EBAD3428A15E2A007C70C2 /* SearchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD3328A15E2A007C70C2 /* SearchVM.swift */; };
 		C9EBAD3928A15E9D007C70C2 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD3828A15E9D007C70C2 /* NetWorkManager.swift */; };
 		C9EBAD3C28A15EC0007C70C2 /* DataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD3B28A15EC0007C70C2 /* DataManger.swift */; };
@@ -29,12 +28,12 @@
 		C9EBAD4B28A16186007C70C2 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD4928A16186007C70C2 /* TableViewCell.swift */; };
 		C9EBAD5528A167CC007C70C2 /* ViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD5428A167CC007C70C2 /* ViewController+Delegate.swift */; };
 		C9EBAD5728A167E1007C70C2 /* ViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBAD5628A167E1007C70C2 /* ViewController+DataSource.swift */; };
+		D026312B28A6EAF10090B88C /* SearchVM+FavoriteAddable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D026312A28A6EAF10090B88C /* SearchVM+FavoriteAddable.swift */; };
 		D046B59428A2DBBA005A548A /* MealDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D046B59328A2DBBA005A548A /* MealDetailsView.swift */; };
 		D04D484D28A44D9C00415033 /* FirstTimeUse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D04D484C28A44D9C00415033 /* FirstTimeUse.storyboard */; };
 		D04D484F28A4547800415033 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D484E28A4547800415033 /* TabViewController.swift */; };
 		D04D485728A5935E00415033 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D485628A5935E00415033 /* FavoritesView.swift */; };
 		D04D485F28A6058D00415033 /* PlainList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D485E28A6058D00415033 /* PlainList.swift */; };
-		D04D486128A67D2000415033 /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D04D486028A67D2000415033 /* Favorites.storyboard */; };
 		D04D486328A67D7100415033 /* FavoritesHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D486228A67D7100415033 /* FavoritesHost.swift */; };
 		D0E26FFC28A34CF2007F310E /* TabViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E26FFB28A34CF2007F310E /* TabViewRepresentable.swift */; };
 		D913014428A2BC0D00AB4B88 /* UIColor+newColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D913014328A2BC0D00AB4B88 /* UIColor+newColors.swift */; };
@@ -56,8 +55,7 @@
 		C9EBAD1B28A15410007C70C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9EBAD1E28A15410007C70C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9EBAD2028A15410007C70C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C9EBAD2828A15A07007C70C2 /* MealDetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsVM.swift; sourceTree = "<group>"; };
-		C9EBAD3028A15DFC007C70C2 /* FavoritesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVM.swift; sourceTree = "<group>"; };
+		C9EBAD2828A15A07007C70C2 /* MealVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealVM.swift; sourceTree = "<group>"; };
 		C9EBAD3328A15E2A007C70C2 /* SearchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVM.swift; sourceTree = "<group>"; };
 		C9EBAD3828A15E9D007C70C2 /* NetWorkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkManager.swift; sourceTree = "<group>"; };
 		C9EBAD3B28A15EC0007C70C2 /* DataManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManger.swift; sourceTree = "<group>"; };
@@ -67,12 +65,12 @@
 		C9EBAD4928A16186007C70C2 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		C9EBAD5428A167CC007C70C2 /* ViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Delegate.swift"; sourceTree = "<group>"; };
 		C9EBAD5628A167E1007C70C2 /* ViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+DataSource.swift"; sourceTree = "<group>"; };
+		D026312A28A6EAF10090B88C /* SearchVM+FavoriteAddable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchVM+FavoriteAddable.swift"; sourceTree = "<group>"; };
 		D046B59328A2DBBA005A548A /* MealDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsView.swift; sourceTree = "<group>"; };
 		D04D484C28A44D9C00415033 /* FirstTimeUse.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstTimeUse.storyboard; sourceTree = "<group>"; };
 		D04D484E28A4547800415033 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		D04D485628A5935E00415033 /* FavoritesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		D04D485E28A6058D00415033 /* PlainList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainList.swift; sourceTree = "<group>"; };
-		D04D486028A67D2000415033 /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
 		D04D486228A67D7100415033 /* FavoritesHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesHost.swift; sourceTree = "<group>"; };
 		D0E26FFB28A34CF2007F310E /* TabViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewRepresentable.swift; sourceTree = "<group>"; };
 		D913014328A2BC0D00AB4B88 /* UIColor+newColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+newColors.swift"; sourceTree = "<group>"; };
@@ -135,7 +133,6 @@
 		C9EBAD2728A159AC007C70C2 /* MealDetails */ = {
 			isa = PBXGroup;
 			children = (
-				C9EBAD2828A15A07007C70C2 /* MealDetailsVM.swift */,
 				D046B59328A2DBBA005A548A /* MealDetailsView.swift */,
 			);
 			name = MealDetails;
@@ -152,10 +149,8 @@
 		C9EBAD2F28A15DCE007C70C2 /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
-				D04D486028A67D2000415033 /* Favorites.storyboard */,
 				D04D486228A67D7100415033 /* FavoritesHost.swift */,
 				D04D485628A5935E00415033 /* FavoritesView.swift */,
-				C9EBAD3028A15DFC007C70C2 /* FavoritesVM.swift */,
 			);
 			name = Favorites;
 			sourceTree = "<group>";
@@ -211,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				C9EBAD4628A16137007C70C2 /* Models.swift */,
+				C9EBAD2828A15A07007C70C2 /* MealVM.swift */,
 				89DDB62028A3013300934303 /* MealModel+ConvertData.swift */,
 				D04D485E28A6058D00415033 /* PlainList.swift */,
 				D913014328A2BC0D00AB4B88 /* UIColor+newColors.swift */,
@@ -244,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				C9EBAD1628A1540F007C70C2 /* ViewController.swift */,
+				D026312A28A6EAF10090B88C /* SearchVM+FavoriteAddable.swift */,
 				C9EBAD5428A167CC007C70C2 /* ViewController+Delegate.swift */,
 				C9EBAD5628A167E1007C70C2 /* ViewController+DataSource.swift */,
 			);
@@ -331,7 +328,6 @@
 				D04D484D28A44D9C00415033 /* FirstTimeUse.storyboard in Resources */,
 				D913014828A4250200AB4B88 /* SearchByLetter.storyboard in Resources */,
 				C7A80FC528A4284800F2EB48 /* Main.storyboard in Resources */,
-				D04D486128A67D2000415033 /* Favorites.storyboard in Resources */,
 				C9EBAD1C28A15410007C70C2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,11 +356,11 @@
 				D913014A28A55A8900AB4B88 /* SearchByLetterViewController.swift in Sources */,
 				D913014428A2BC0D00AB4B88 /* UIColor+newColors.swift in Sources */,
 				D04D484F28A4547800415033 /* TabViewController.swift in Sources */,
-				C9EBAD2928A15A07007C70C2 /* MealDetailsVM.swift in Sources */,
+				C9EBAD2928A15A07007C70C2 /* MealVM.swift in Sources */,
+				D026312B28A6EAF10090B88C /* SearchVM+FavoriteAddable.swift in Sources */,
 				C9EBAD3928A15E9D007C70C2 /* NetWorkManager.swift in Sources */,
 				C9947B5928A55CAC00BC19D4 /* Meal+Decodable.swift in Sources */,
 				C9EBAD4728A16137007C70C2 /* Models.swift in Sources */,
-				C9EBAD3128A15DFC007C70C2 /* FavoritesVM.swift in Sources */,
 				C9EBAD3428A15E2A007C70C2 /* SearchVM.swift in Sources */,
 				C9EBAD5528A167CC007C70C2 /* ViewController+Delegate.swift in Sources */,
 				89DDB61F28A2E79B00934303 /* hungr.xcdatamodeld in Sources */,
