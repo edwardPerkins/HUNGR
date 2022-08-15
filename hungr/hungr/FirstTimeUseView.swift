@@ -11,35 +11,34 @@ struct FirstTimeUseView: View {
     @ObservedObject var viewModel = SearchVM()
     
     var firstUse: Bool { !UserDefaults.standard.bool(forKey: "usedAlready") }
+    @State var nextScreen = false
     
     var body: some View {
-        NavigationView {
-            if firstUse {
-                ZStack {
-                    // background
-                    Color.background
-                        .ignoresSafeArea()
-                    
-                    // content
-                    VStack {
-                        welcomeSection
-                        thankYouSection
-                        logoSection
-                        continueSection
-                    }
+        if nextScreen {
+            ZStack {
+                // background
+                Color.background
+                    .ignoresSafeArea()
+                
+                // content
+                VStack {
+                    welcomeSection
+                    thankYouSection
+                    logoSection
+                    continueSection
                 }
-            } else {
-                tabView
             }
+        } else {
+            Rectangle().overlay(content: { tabView })
         }
-        .accentColor(.accent2)
+//    .accentColor(.accent2)
     }
 }
 
 extension FirstTimeUseView {
     
     var tabView: some View {
-        TabViewRepresentable().environmentObject(viewModel).navigationBarHidden(true).ignoresSafeArea()
+        TabViewRepresentable().environmentObject(viewModel).navigationBarHidden(true).ignoresSafeArea().accentColor(.accent2)
     }
     
     var welcomeSection: some View {
@@ -68,7 +67,7 @@ extension FirstTimeUseView {
     }
     
     var continueSection: some View {
-        NavigationLink(destination:tabView) {
+        Button(action: { nextScreen = false }) {
             Text("Continue")
                 .font(.system(size: 40.0))
                 .foregroundColor(.accent1)

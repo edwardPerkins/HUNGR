@@ -13,7 +13,7 @@ class TabViewController: UITabBarController, UITabBarControllerDelegate {
     
     override func viewDidLoad() {
         print("used already was", UserDefaults.standard.bool(forKey: "usedAlready"))
-        UserDefaults.standard.set(true, forKey: "usedAlready")
+        UserDefaults.standard.set(false, forKey: "usedAlready")
         print("used already set to", UserDefaults.standard.bool(forKey: "usedAlready"))
         self.delegate = self
         
