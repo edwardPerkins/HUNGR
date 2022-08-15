@@ -10,6 +10,13 @@
 		0B7D6A2B28A2E38E008515D5 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7D6A2A28A2E38E008515D5 /* TableViewCell.xib */; };
 		0B7D6A2D28A32BDD008515D5 /* FirstTimeUseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7D6A2C28A32BDD008515D5 /* FirstTimeUseView.swift */; };
 		0B9F5ABC28A5BA2200312C4E /* hungrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F5ABB28A5BA2200312C4E /* hungrTests.swift */; };
+		89769EF728AA95A50018A453 /* CreateMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89769EF028AA95A50018A453 /* CreateMealViewController.swift */; };
+		89769EF828AA95A50018A453 /* MyMealsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89769EF128AA95A50018A453 /* MyMealsViewModel.swift */; };
+		89769EF928AA95A50018A453 /* MyMealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89769EF228AA95A50018A453 /* MyMealCell.swift */; };
+		89769EFA28AA95A50018A453 /* MyMeals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89769EF328AA95A50018A453 /* MyMeals.storyboard */; };
+		89769EFB28AA95A50018A453 /* MyMealsController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89769EF428AA95A50018A453 /* MyMealsController+DataSource.swift */; };
+		89769EFC28AA95A50018A453 /* MyMealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89769EF528AA95A50018A453 /* MyMealsViewController.swift */; };
+		89769EFD28AA95A50018A453 /* MyMealCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89769EF628AA95A50018A453 /* MyMealCell.xib */; };
 		89DDB61F28A2E79B00934303 /* hungr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 89DDB61D28A2E79B00934303 /* hungr.xcdatamodeld */; };
 		89DDB62128A3013300934303 /* MealModel+ConvertData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DDB62028A3013300934303 /* MealModel+ConvertData.swift */; };
 		C7A80FC528A4284800F2EB48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A80FC428A4284800F2EB48 /* Main.storyboard */; };
@@ -57,6 +64,13 @@
 		0B7D6A2C28A32BDD008515D5 /* FirstTimeUseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeUseView.swift; sourceTree = "<group>"; };
 		0B9F5AB928A5BA2200312C4E /* hungrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hungrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B9F5ABB28A5BA2200312C4E /* hungrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hungrTests.swift; sourceTree = "<group>"; };
+		89769EF028AA95A50018A453 /* CreateMealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMealViewController.swift; sourceTree = "<group>"; };
+		89769EF128AA95A50018A453 /* MyMealsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMealsViewModel.swift; sourceTree = "<group>"; };
+		89769EF228AA95A50018A453 /* MyMealCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMealCell.swift; sourceTree = "<group>"; };
+		89769EF328AA95A50018A453 /* MyMeals.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyMeals.storyboard; sourceTree = "<group>"; };
+		89769EF428AA95A50018A453 /* MyMealsController+DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyMealsController+DataSource.swift"; sourceTree = "<group>"; };
+		89769EF528AA95A50018A453 /* MyMealsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMealsViewController.swift; sourceTree = "<group>"; };
+		89769EF628AA95A50018A453 /* MyMealCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyMealCell.xib; sourceTree = "<group>"; };
 		89DDB61E28A2E79B00934303 /* hungr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = hungr.xcdatamodel; sourceTree = "<group>"; };
 		89DDB62028A3013300934303 /* MealModel+ConvertData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MealModel+ConvertData.swift"; sourceTree = "<group>"; };
 		C7A80FC428A4284800F2EB48 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -115,6 +129,20 @@
 				0B9F5ABB28A5BA2200312C4E /* hungrTests.swift */,
 			);
 			path = hungrTests;
+			sourceTree = "<group>";
+		};
+		89769EEF28AA95880018A453 /* MyMeals */ = {
+			isa = PBXGroup;
+			children = (
+				89769EF028AA95A50018A453 /* CreateMealViewController.swift */,
+				89769EF228AA95A50018A453 /* MyMealCell.swift */,
+				89769EF628AA95A50018A453 /* MyMealCell.xib */,
+				89769EF328AA95A50018A453 /* MyMeals.storyboard */,
+				89769EF428AA95A50018A453 /* MyMealsController+DataSource.swift */,
+				89769EF528AA95A50018A453 /* MyMealsViewController.swift */,
+				89769EF128AA95A50018A453 /* MyMealsViewModel.swift */,
+			);
+			name = MyMeals;
 			sourceTree = "<group>";
 		};
 		C9EBAD0628A1540F007C70C2 = {
@@ -257,6 +285,7 @@
 		C9EBAD5228A16740007C70C2 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				89769EEF28AA95880018A453 /* MyMeals */,
 				D04D485D28A596FB00415033 /* TabView */,
 				C9EBAD3228A15E0F007C70C2 /* Search */,
 				C9EBAD2F28A15DCE007C70C2 /* Favorites */,
@@ -387,6 +416,8 @@
 				C9EBAD1F28A15410007C70C2 /* LaunchScreen.storyboard in Resources */,
 				D04D484D28A44D9C00415033 /* FirstTimeUse.storyboard in Resources */,
 				D913014828A4250200AB4B88 /* SearchByLetter.storyboard in Resources */,
+				89769EFD28AA95A50018A453 /* MyMealCell.xib in Resources */,
+				89769EFA28AA95A50018A453 /* MyMeals.storyboard in Resources */,
 				C7A80FC528A4284800F2EB48 /* Main.storyboard in Resources */,
 				C9EBAD1C28A15410007C70C2 /* Assets.xcassets in Resources */,
 			);
@@ -412,15 +443,20 @@
 				D04D485728A5935E00415033 /* FavoritesView.swift in Sources */,
 				C9EBAD4128A15F43007C70C2 /* StringConstants.swift in Sources */,
 				D0E26FFC28A34CF2007F310E /* TabViewRepresentable.swift in Sources */,
+				89769EF828AA95A50018A453 /* MyMealsViewModel.swift in Sources */,
 				D04D486328A67D7100415033 /* FavoritesHost.swift in Sources */,
 				C9EBAD1728A1540F007C70C2 /* ViewController.swift in Sources */,
 				89DDB62128A3013300934303 /* MealModel+ConvertData.swift in Sources */,
 				0B7D6A2D28A32BDD008515D5 /* FirstTimeUseView.swift in Sources */,
+				89769EF928AA95A50018A453 /* MyMealCell.swift in Sources */,
 				C9EBAD1328A1540F007C70C2 /* AppDelegate.swift in Sources */,
 				C9EBAD4428A160C4007C70C2 /* FirstTimeUseHost.swift in Sources */,
 				C9EBAD4B28A16186007C70C2 /* TableViewCell.swift in Sources */,
+				89769EF728AA95A50018A453 /* CreateMealViewController.swift in Sources */,
+				89769EFB28AA95A50018A453 /* MyMealsController+DataSource.swift in Sources */,
 				D046B59428A2DBBA005A548A /* MealDetailsView.swift in Sources */,
 				C9EBAD3C28A15EC0007C70C2 /* DataManger.swift in Sources */,
+				89769EFC28AA95A50018A453 /* MyMealsViewController.swift in Sources */,
 				D913014A28A55A8900AB4B88 /* SearchByLetterViewController.swift in Sources */,
 				D913014428A2BC0D00AB4B88 /* UIColor+newColors.swift in Sources */,
 				D04D484F28A4547800415033 /* TabViewController.swift in Sources */,
