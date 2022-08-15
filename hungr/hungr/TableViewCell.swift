@@ -13,20 +13,31 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var recipeImageLabel: UIImageView!
     @IBOutlet weak var favoriteOutlet: UIButton!
     
+    var cellVM: MealVM?
+    var favoriteEditableDelegate: FavoriteEditable?
+    
     override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        favoriteOutlet.setImage(UIImage(systemName: "star"), for: .normal)
+        favoriteOutlet.setImage(UIImage(systemName: "star.fill"), for: .selected)
     }
     
-    func configure(_ vm: MealDetailsVM) {
+    func configure(_ vm: MealVM) {
         recipeTitleLabel.text = vm.name
         recipeImageLabel.image = UIImage(data: vm.imageData)
+        favoriteOutlet.isSelected = vm.isFavorite
+        cellVM = vm
     }
+    
+    @IBAction func onClickFavorite(_ sender: Any) {
+        guard let cellVM = cellVM else { return }
+        if cellVM.isFavorite {
+            favoriteEditableDelegate?.removeFromFavorites(cellVM.meal)
+        } else {
+            favoriteEditableDelegate?.addToFavorites(cellVM.meal)
+        }
+        favoriteOutlet.isSelected.toggle()
+        cellVM.isFavorite.toggle()
+    }
+    
     
 }

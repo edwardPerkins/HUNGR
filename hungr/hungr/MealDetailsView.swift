@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct MealDetailsView: View {
-    let vm: MealDetailsVM
+    let viewModel: MealVM
     
     var body: some View {
         VStack {
-            Text(vm.name).font(.largeTitle)
-            Image(data: vm.imageData).resizable().frame(width: 150, height: 150)
+            Text(viewModel.name).font(.largeTitle)
+            Image(data: viewModel.imageData).resizable().frame(width: 150, height: 150)
             ScrollView {
-                Text(vm.instructions)
+                Text(viewModel.instructions)
                     .padding(.horizontal, 10)
                     .font(.body)
             }
-            ForEach(vm.ingredients, id: \.self) { ingredient in
+            ForEach(viewModel.ingredients, id: \.self) { ingredient in
                 HStack {
                     Text(ingredient.amount)
                     Spacer()

@@ -12,6 +12,7 @@ extension ViewController: UITableViewDataSource {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as? TableViewCell {
             guard let cellVM = viewModel.getDestinationVM(at: indexPath.row) else { return TableViewCell() }
             cell.configure(cellVM)
+            cell.favoriteEditableDelegate = viewModel
             return cell
         }
         return UITableViewCell()

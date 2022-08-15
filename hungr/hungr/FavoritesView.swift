@@ -8,33 +8,41 @@
 import SwiftUI
 
 struct FavoritesView: View {
-//    let favVM = FavoritesVM()
-    @State var favoriteMeals: [(String, Bool)] = [("test", true), ("fav", true), ("meals", true)]
+    @EnvironmentObject var favVM: SearchVM
     
     var body: some View {
         ZStack {
             Color.background.ignoresSafeArea()
             VStack {
-                Text("Favorites").font(.largeTitle)
+                HStack {
+                    Spacer()
+                    EditButton().padding()
+                }
+                Text("Favorites")
+                    .font(.largeTitle)
                     .foregroundColor(.textColor)
-                ForEach(favoriteMeals.indices, id: \.self) { index in
-                    VStack {
-                        Text(favoriteMeals[index].0)
-                            .foregroundColor(.textColor)
-                            .font(.title2)
-                        HStack {
-                            Image(systemName: "logo.playstation")
-                            Button(action: { favoriteMeals[index].1.toggle() }) {
-                                if favoriteMeals[index].1 {
-                                    Image(systemName: "star.fill")
-                                } else {
-                                    Image(systemName: "star")
-                                }
+                ForEach(favVM.favorites, id: \.self.id) { favorite in
+                    NavigationLink(destination: MealDetailsView(viewModel: favorite)) {
+                        VStack {
+                            Text(favorite.name)
+                                .bold()
+                                .frame(height: 80)
+                                .foregroundColor(.textColor)
+                                .multilineTextAlignment(.center)
+                                .font(.title2)
+                            HStack {
+                                Image(data: favorite.imageData)
+                                    .resizable()
+                                    .frame(width: 150, height: 150)
+                                Image(systemName: "star.fill")
                             }
+                            .foregroundColor(.accent2)
+                            .font(.system(size: 125))
                         }
-                        .foregroundColor(.accent2)
-                        .font(.system(size: 125))
                     }
+                }
+                .onDelete { offset in
+                    favVM.delete(at: offset)
                 }
                 .plainList()
             }
@@ -42,8 +50,8 @@ struct FavoritesView: View {
     }
 }
 
-struct FavoritesView_Previews: PreviewProvider {
-    static var previews: some View {
-        FavoritesView()
-    }
-}
+//struct FavoritesView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FavoritesView()
+//    }
+//}
