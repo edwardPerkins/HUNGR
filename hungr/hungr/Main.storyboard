@@ -30,18 +30,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HUNGR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E05-Rs-Num">
-                                <rect key="frame" x="153.5" y="94" width="107.5" height="37"/>
+                                <rect key="frame" x="153.5" y="138" width="107.5" height="37"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JA4-Cd-m6h">
-                                <rect key="frame" x="20" y="151" width="283.5" height="34"/>
+                                <rect key="frame" x="20" y="195" width="283.5" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwK-PF-Cvc">
-                                <rect key="frame" x="308.5" y="152.5" width="90.5" height="31"/>
+                                <rect key="frame" x="308.5" y="196.5" width="90.5" height="31"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" image="YES"/>
                                 </accessibility>
@@ -53,7 +53,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtO-UV-Z40">
-                                <rect key="frame" x="35" y="205" width="131" height="31"/>
+                                <rect key="frame" x="35" y="249" width="131" height="31"/>
                                 <color key="tintColor" name="AccentTwo"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Search by Letter"/>
@@ -62,7 +62,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJt-rj-hNK">
-                                <rect key="frame" x="242" y="205" width="137" height="31"/>
+                                <rect key="frame" x="242" y="249" width="137" height="31"/>
                                 <color key="tintColor" name="AccentTwo"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="I'm Feeling Lucky"/>
@@ -71,7 +71,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UnC-CR-PzE">
-                                <rect key="frame" x="0.0" y="266" width="414" height="527"/>
+                                <rect key="frame" x="0.0" y="310" width="414" height="483"/>
                                 <color key="backgroundColor" name="accentOne"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="GtC-7p-Fgx">
@@ -105,9 +105,6 @@
                             <constraint firstAttribute="trailing" secondItem="UnC-CR-PzE" secondAttribute="trailing" id="uTf-eZ-3BW"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="search" id="0bH-RV-28I">
-                        <color key="badgeColor" name="accentTwo"/>
-                    </tabBarItem>
                     <navigationItem key="navigationItem" id="jbK-Dh-Rsn"/>
                     <connections>
                         <outlet property="mainTableView" destination="UnC-CR-PzE" id="dOy-OF-R0L"/>
@@ -116,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="und-RF-7Uh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3632" y="485"/>
+            <point key="canvasLocation" x="4542.0289855072469" y="484.82142857142856"/>
         </scene>
         <!--SearchByLetter-->
         <scene sceneID="JOc-O1-gaW">
@@ -126,7 +123,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t2r-kG-hCb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4223" y="485"/>
+            <point key="canvasLocation" x="5131.884057971015" y="484.82142857142856"/>
         </scene>
         <!--Tab View Controller-->
         <scene sceneID="U12-vQ-JrQ">
@@ -143,7 +140,7 @@
                         <color key="selectedImageTintColor" name="accentTwo"/>
                     </tabBar>
                     <connections>
-                        <segue destination="yjk-0l-8Po" kind="relationship" relationship="viewControllers" id="gE8-ky-rbz"/>
+                        <segue destination="uo6-Tl-tgg" kind="relationship" relationship="viewControllers" id="gE8-ky-rbz"/>
                         <segue destination="iFp-Q0-bdA" kind="relationship" relationship="viewControllers" id="bLc-AR-okV"/>
                         <segue destination="YES-Ls-y2k" kind="relationship" relationship="viewControllers" id="hZB-me-nYl"/>
                     </connections>
@@ -163,6 +160,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="URx-rf-AXv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3633" y="-224"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vdF-zZ-xLI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uo6-Tl-tgg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="search" id="0bH-RV-28I">
+                        <color key="badgeColor" name="accentTwo"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aKo-4K-sSZ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yjk-0l-8Po" kind="relationship" relationship="rootViewController" id="MRI-9D-HKY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uVD-aU-OUS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3631.884057971015" y="484.82142857142856"/>
         </scene>
     </scenes>
     <resources>

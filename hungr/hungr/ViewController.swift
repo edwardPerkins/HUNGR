@@ -40,6 +40,7 @@ class ViewController: UIViewController {
     
     @IBAction func onClickFeelingLucky(_ sender: Any) {
         viewModel.getMeals(Query.random) {
+            print("test")
             guard let destinationVM = self.viewModel.getDestinationVM(at: 0) else { return }
             DispatchQueue.main.async {
                 let host = UIHostingController(rootView: MealDetailsView(viewModel: destinationVM))
@@ -52,6 +53,7 @@ class ViewController: UIViewController {
         guard let term = searchField?.text else { return }
         viewModel.getMeals(Query.search(term)) {
             DispatchQueue.main.async {
+                print("test")
                 self.mainTableView.reloadData()
             }
         }

@@ -30,6 +30,7 @@ class SearchVM: ObservableObject {
             self.mealList = data?.meals?.map { MealVM($0, group: self.group) }
             self.mealList?.forEach { meal in
                 self.group.enter()
+                
                 if self.favorites.contains(where: { $0.meal.id == meal.id }) {
                     meal.isFavorite = true
                 }
