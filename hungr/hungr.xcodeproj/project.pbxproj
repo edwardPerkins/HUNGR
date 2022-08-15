@@ -51,16 +51,6 @@
 		D913014A28A55A8900AB4B88 /* SearchByLetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D913014928A55A8900AB4B88 /* SearchByLetterViewController.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		8907B36628A5A9C700A9CAF1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C9EBAD0728A1540F007C70C2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C9EBAD0E28A1540F007C70C2;
-			remoteInfo = hungr;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		0B7D6A2428A2C7D0008515D5 /* IngredientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTableViewCell.swift; sourceTree = "<group>"; };
 		0B7D6A2528A2C7D0008515D5 /* IngredientTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientTableViewCell.xib; sourceTree = "<group>"; };
@@ -73,7 +63,6 @@
 		8907B35228A5856700A9CAF1 /* MyMealsController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyMealsController+DataSource.swift"; sourceTree = "<group>"; };
 		8907B35428A58C0500A9CAF1 /* MyMealsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMealsViewModel.swift; sourceTree = "<group>"; };
 		8907B35628A598C600A9CAF1 /* CreateMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMealViewController.swift; sourceTree = "<group>"; };
-		8907B36028A5A9C700A9CAF1 /* hungrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hungrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89DDB61E28A2E79B00934303 /* hungr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = hungr.xcdatamodel; sourceTree = "<group>"; };
 		89DDB62028A3013300934303 /* MealModel+ConvertData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MealModel+ConvertData.swift"; sourceTree = "<group>"; };
 		C7A80FC428A4284800F2EB48 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -110,13 +99,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8907B35D28A5A9C700A9CAF1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C9EBAD0C28A1540F007C70C2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -153,7 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				C9EBAD0F28A1540F007C70C2 /* hungr.app */,
-				8907B36028A5A9C700A9CAF1 /* hungrUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -317,24 +298,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8907B35F28A5A9C700A9CAF1 /* hungrUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8907B36828A5A9C700A9CAF1 /* Build configuration list for PBXNativeTarget "hungrUITests" */;
-			buildPhases = (
-				8907B35C28A5A9C700A9CAF1 /* Sources */,
-				8907B35D28A5A9C700A9CAF1 /* Frameworks */,
-				8907B35E28A5A9C700A9CAF1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8907B36728A5A9C700A9CAF1 /* PBXTargetDependency */,
-			);
-			name = hungrUITests;
-			productName = hungrUITests;
-			productReference = 8907B36028A5A9C700A9CAF1 /* hungrUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		C9EBAD0E28A1540F007C70C2 /* hungr */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9EBAD2328A15410007C70C2 /* Build configuration list for PBXNativeTarget "hungr" */;
@@ -362,10 +325,6 @@
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
-					8907B35F28A5A9C700A9CAF1 = {
-						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = C9EBAD0E28A1540F007C70C2;
-					};
 					C9EBAD0E28A1540F007C70C2 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -385,19 +344,11 @@
 			projectRoot = "";
 			targets = (
 				C9EBAD0E28A1540F007C70C2 /* hungr */,
-				8907B35F28A5A9C700A9CAF1 /* hungrUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8907B35E28A5A9C700A9CAF1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C9EBAD0D28A1540F007C70C2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -417,13 +368,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8907B35C28A5A9C700A9CAF1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C9EBAD0B28A1540F007C70C2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -466,14 +410,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		8907B36728A5A9C700A9CAF1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C9EBAD0E28A1540F007C70C2 /* hungr */;
-			targetProxy = 8907B36628A5A9C700A9CAF1 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
 		C9EBAD1D28A15410007C70C2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -486,40 +422,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		8907B36928A5A9C700A9CAF1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = personal.hungrUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = hungr;
-			};
-			name = Debug;
-		};
-		8907B36A28A5A9C700A9CAF1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = personal.hungrUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = hungr;
-			};
-			name = Release;
-		};
 		C9EBAD2128A15410007C70C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -693,15 +595,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8907B36828A5A9C700A9CAF1 /* Build configuration list for PBXNativeTarget "hungrUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8907B36928A5A9C700A9CAF1 /* Debug */,
-				8907B36A28A5A9C700A9CAF1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		C9EBAD0A28A1540F007C70C2 /* Build configuration list for PBXProject "hungr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
